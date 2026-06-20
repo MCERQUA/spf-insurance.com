@@ -1,17 +1,25 @@
-import { Fraunces, Inter } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 
-// Body font — Inter (clean, highly legible modern sans for dense coverage copy)
-export const bodyFont = Inter({
+// Body + heading font — IBM Plex Sans (Technical Precision design system)
+export const bodyFont = IBM_Plex_Sans({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-// Heading font — Fraunces (warm variable serif; editorial, premium, pastoral feel)
-export const headingFont = Fraunces({
+// Heading font alias (same family for consistent Technical Precision aesthetic)
+export const headingFont = IBM_Plex_Sans({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+// Mono font — IBM Plex Mono (eyebrows, labels, technical notation)
+export const monoFont = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500"],
   display: "swap",
 });

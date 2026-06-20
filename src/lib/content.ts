@@ -23,6 +23,8 @@ export const COPY = {
     tagline: "Technical coverage for technical work.",
     copyright: `© ${new Date().getFullYear()} Contractors Choice Agency. All rights reserved.`,
     npnNote: "NPN #8608479 · Licensed all 50 states",
+    ctaSubcopy: "SPF-specific GL, CPL for isocyanate exposure, rig insurance, and umbrella. 15-minute quotes.",
+    description: "Precision insurance for spray polyurethane foam contractors. SPF GL with off-ratio endorsements, contractor pollution liability for MDI/TDI exposure, rig insurance, workers' comp, and umbrella. Licensed all 50 states since 2005.",
   },
   servicesGrid: {
     eyebrow: "Coverage specifications",
