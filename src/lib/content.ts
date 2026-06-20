@@ -12,6 +12,10 @@ export const COPY = {
     h1Lead: "Insurance engineered for",
     h1Highlight: "SPF applicators",
     lead: "Coverage specifications built for spray polyurethane foam contractors — GL with isocyanate endorsements, contractor pollution liability for MDI/TDI exposure, rig insurance for your proportioner, and umbrella limits that meet GC requirements. All 50 states.",
+    subcopy: "Coverage specifications built for spray polyurethane foam contractors — GL with isocyanate endorsements, contractor pollution liability for MDI/TDI exposure, rig insurance for your proportioner, and umbrella limits that meet GC requirements. All 50 states.",
+    imageAlt: "SPF applicator in full PPE spraying polyurethane foam in commercial building",
+    statValue: "500+",
+    statLabel: "SPF contractors insured nationwide",
     cta1: "Get a quote",
     cta2: "Call 844-967-5247",
     quoteNote: "15-min quote · A-rated carriers · All 50 states",
@@ -36,7 +40,11 @@ export const COPY = {
   why: {
     eyebrow: "Why SPF Insurance",
     h2: "Built for SPF applicators — not generic contractors",
+    h2Lead: "Built for SPF applicators",
+    h2Highlight: "not generic contractors",
     lead: "Most commercial insurance is written for standard construction. SPF application involves isocyanates, off-ratio risk, and classification challenges that standard policies routinely exclude or misprice.",
+    sidebarTitle: "SPF-specific underwriting",
+    sidebarBody: "We review every policy for correct class codes, isocyanate trigger language in CPL, off-ratio endorsements in GL, and rig equipment coverage gaps before binding.",
   },
   coverage: {
     eyebrow: "Coverage area",

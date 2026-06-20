@@ -33,6 +33,7 @@ export const BRAND = {
   nicheAdj: "spray polyurethane foam",
   nicheShort: "SPF",
   coverageNote: "Coverage engineered for the technical demands of SPF application.",
+  regionPill: "SPF Contractor Insurance — All 50 States",
 };
 
 export const NAV_LINKS = [
@@ -126,22 +127,28 @@ export const STATS = [
 export const TESTIMONIALS = [
   {
     name: "Marcus T.",
+    role: "Owner, T&S Spray Foam LLC",
     company: "T&S Spray Foam LLC",
     location: "Houston, TX",
+    quote: "We were getting declined everywhere because of our SPF classification. CCA got us GL with the right off-ratio endorsement in two days. First broker who actually understood what we do.",
     text: "We were getting declined everywhere because of our SPF classification. CCA got us GL with the right off-ratio endorsement in two days. First broker who actually understood what we do.",
     rating: 5,
   },
   {
     name: "Sandra R.",
+    role: "Owner, Coastal Foam Solutions",
     company: "Coastal Foam Solutions",
     location: "Tampa, FL",
+    quote: "The CPL coverage for our isocyanate exposure was the piece we were missing. CCA explained the pollution exclusion gap in standard GL and placed us correctly. Real expertise.",
     text: "The CPL coverage for our isocyanate exposure was the piece we were missing. CCA explained the pollution exclusion gap in standard GL and placed us correctly. Real expertise.",
     rating: 5,
   },
   {
     name: "Derek M.",
+    role: "Owner, Summit SPF Insulation",
     company: "Summit SPF Insulation",
     location: "Denver, CO",
+    quote: "Our GC required $5M umbrella with the SPF GL underneath. CCA had the stack bound within a week. They know the commercial SPF insurance market better than anyone we've worked with.",
     text: "Our GC required $5M umbrella with the SPF GL underneath. CCA had the stack bound within a week. They know the commercial SPF insurance market better than anyone we've worked with.",
     rating: 5,
   },
