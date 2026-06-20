@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, Flame } from "lucide-react";
+import { Menu, X, Phone, FlaskConical } from "lucide-react";
 import { NAV_LINKS, SITE, BRAND } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
