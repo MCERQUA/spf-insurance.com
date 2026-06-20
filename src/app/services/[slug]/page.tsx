@@ -9,15 +9,12 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { SERVICES, SITE } from "@/lib/site";
 import { SERVICE_DETAIL, GENERAL_FAQS, COPY } from "@/lib/content";
 import {
-  ShieldCheck, HardHat, Truck, Wrench, FileCheck,
-  Umbrella, Gauge,
+  ShieldCheck, Droplets, HardHat, Truck, Wrench, Umbrella, FlaskConical,
   CheckCircle2, ArrowRight, ArrowLeft, Users, Target,
-  Droplets, Flame,
 } from "lucide-react";
 
 const ICONS = {
-  ShieldCheck, HardHat, Truck, Wrench, FileCheck,
-  Umbrella, Gauge, Droplets, Flame,
+  ShieldCheck, HardHat, Truck, Wrench, Umbrella, Droplets, FlaskConical,
 } as const;
 
 export function generateStaticParams() {
