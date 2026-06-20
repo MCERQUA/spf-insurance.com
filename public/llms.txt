@@ -1,46 +1,44 @@
-# Spray Foam Insurance Agency
+# SPF Insurance
 
-> Spray Foam Insurance Agency (by Contractors Choice Agency) provides specialized commercial insurance for spray foam insulation contractors in all 50 states. Coverage lines: general liability with spray foam endorsements, off-ratio coverage for A:B component mix errors, contractor pollution liability (CPL) for VOC and isocyanate exposure, workers' compensation for spray foam crews, commercial auto for spray rigs and proportioner trucks, tools and equipment coverage for proportioners and spray guns, commercial umbrella, and contractor license and surety bonds. A-rated carriers. 15-minute quotes, 2-hour claims response. Licensed in all 50 states — NPN #8608479. Founded 2005. Contact: 844-967-5247, josh@contractorschoiceagency.com.
+> SPF Insurance (by Contractors Choice Agency) provides precision insurance coverage for spray polyurethane foam (SPF) contractors in all 50 states. Coverage lines: SPF contractor general liability with isocyanate and off-ratio endorsements, contractor pollution liability (CPL) for MDI/TDI exposure, workers' compensation for SPF applicator crews, commercial auto for spray rigs and proportioner trucks, SPF rig and equipment insurance (inland marine for proportioners and heated hose assemblies), and commercial umbrella up to $10M. A-rated carriers. 15-minute quotes. Licensed all 50 states — NPN #8608479. Founded 2005. Contact: 844-967-5247, josh@contractorschoiceagency.com.
 
 ## Core pages
 
-- Homepage: https://sprayfoaminsuranceagency.com
-- Services: https://sprayfoaminsuranceagency.com/services
-- Coverage map: https://sprayfoaminsuranceagency.com/coverage
-- About: https://sprayfoaminsuranceagency.com/about
-- Get a quote: https://sprayfoaminsuranceagency.com/quote
-- Contact: https://sprayfoaminsuranceagency.com/contact
-- Blog: https://sprayfoaminsuranceagency.com/blog
+- Homepage: https://spf-insurance.com
+- Services: https://spf-insurance.com/services
+- Coverage map: https://spf-insurance.com/coverage
+- About: https://spf-insurance.com/about
+- Get a quote: https://spf-insurance.com/quote
+- Contact: https://spf-insurance.com/contact
+- Blog: https://spf-insurance.com/blog
 
-## Insurance service lines (spray foam contractors)
+## Insurance service lines (SPF contractors)
 
-- General Liability for Spray Foam: https://sprayfoaminsuranceagency.com/services/general-liability
-- Off-Ratio Coverage: https://sprayfoaminsuranceagency.com/services/off-ratio-coverage
-- Contractor Pollution Liability: https://sprayfoaminsuranceagency.com/services/contractor-pollution-liability
-- Workers' Compensation: https://sprayfoaminsuranceagency.com/services/workers-compensation
-- Commercial Auto & Spray Rigs: https://sprayfoaminsuranceagency.com/services/commercial-auto
-- Tools & Equipment Coverage: https://sprayfoaminsuranceagency.com/services/tools-equipment
-- Commercial Umbrella: https://sprayfoaminsuranceagency.com/services/umbrella
-- Contractor License & Surety Bonds: https://sprayfoaminsuranceagency.com/services/bonds
+- SPF Contractor General Liability: https://spf-insurance.com/services/spf-contractor-gl
+- Contractor Pollution Liability: https://spf-insurance.com/services/contractor-pollution-liability
+- Workers' Compensation: https://spf-insurance.com/services/workers-compensation
+- Commercial Auto & Spray Rigs: https://spf-insurance.com/services/commercial-auto
+- SPF Rig & Equipment Insurance: https://spf-insurance.com/services/rig-insurance
+- Commercial Umbrella: https://spf-insurance.com/services/umbrella
 
 ## Coverage regions
 
-- Texas & Southwest: https://sprayfoaminsuranceagency.com/locations/texas-southwest
-- Southeast: https://sprayfoaminsuranceagency.com/locations/southeast
-- Midwest: https://sprayfoaminsuranceagency.com/locations/midwest
-- Northeast: https://sprayfoaminsuranceagency.com/locations/northeast
-- California: https://sprayfoaminsuranceagency.com/locations/california
-- Mountain States: https://sprayfoaminsuranceagency.com/locations/mountain-states
-- Mid-Atlantic: https://sprayfoaminsuranceagency.com/locations/mid-atlantic
-- Pacific Northwest: https://sprayfoaminsuranceagency.com/locations/pacific-northwest
+- Texas & Southwest: https://spf-insurance.com/locations/texas-southwest
+- Southeast: https://spf-insurance.com/locations/southeast
+- Midwest: https://spf-insurance.com/locations/midwest
+- Northeast: https://spf-insurance.com/locations/northeast
+- California: https://spf-insurance.com/locations/california
+- Mountain States: https://spf-insurance.com/locations/mountain-states
+- Mid-Atlantic: https://spf-insurance.com/locations/mid-atlantic
+- Pacific Northwest: https://spf-insurance.com/locations/pacific-northwest
 
 ## Optional
 
-- Privacy policy: https://sprayfoaminsuranceagency.com/privacy
+- Privacy policy: https://spf-insurance.com/privacy
 
 ## Key facts
 
-- Agency: Contractors Choice Agency (division: Spray Foam Insurance Agency)
+- Agency: Contractors Choice Agency (division: SPF Insurance)
 - NPN: #8608479
 - Phone: 844-967-5247
 - Email: josh@contractorschoiceagency.com
@@ -50,5 +48,5 @@
 - Quote turnaround: ~15 minutes
 - Claims response: 2-hour SLA
 - Carriers: A-rated and A.M. Best A+ markets
-- Target clients: Spray foam insulation contractors, spray polyurethane foam (SPF) applicators, insulation contractors, spray foam roofing contractors
-- Key coverages: GL with spray foam endorsements, off-ratio coverage, CPL for VOC/isocyanate exposure, workers' comp, commercial auto for spray rigs, tools and equipment, umbrella, bonds
+- Target clients: Spray polyurethane foam (SPF) contractors, SPF applicators, closed-cell and open-cell foam contractors, SPF roofing contractors, agricultural and cold-storage SPF contractors
+- Key coverages: SPF contractor GL with off-ratio and isocyanate endorsements, CPL for MDI/TDI exposure, workers' comp with SPF class codes, commercial auto for spray rigs, inland marine for proportioners, commercial umbrella

@@ -100,8 +100,8 @@ export default async function LocationPage({ params }: Props) {
           <div className="container-tight">
             <FadeIn className="max-w-2xl mb-10">
               <span className="eyebrow"><span className="h-px w-8 bg-clay" />Coverage for {loc.name} contractors</span>
-              <h2 className="mt-3 h-section">The full program, built for {loc.name} spray foam contractors.</h2>
-              <p className="mt-4 lead">From a solo applicator to a multi-crew insulation business, we coordinate every line a {loc.name} spray foam contractor needs.</p>
+              <h2 className="mt-3 h-section">The full program, built for {loc.name} SPF contractors.</h2>
+              <p className="mt-4 lead">From a solo applicator to a multi-crew SPF business, we coordinate every line a {loc.name} SPF contractor needs.</p>
             </FadeIn>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.slice(0, 4).map((s, i) => (

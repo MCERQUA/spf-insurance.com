@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: `${SITE.name} | Contractors Choice Agency`,
     description:
       "Precision insurance coverage for spray polyurethane foam contractors — SPF contractor GL, contractor pollution liability for isocyanate exposure, workers' comp, commercial auto, rig insurance, and umbrella. Technical coverage for technical work. All 50 states.",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `${SITE.name} — spray foam contractor insurance` }],
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `${SITE.name} — SPF contractor insurance` }],
   },
   twitter: {
     card: "summary_large_image",
@@ -72,14 +72,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     employee: { "@type": "Person", name: "Josh Cotner", jobTitle: "Founder & Insurance Agent" },
     areaServed: { "@type": "Country", name: "United States" },
     serviceType: [
-      "General Liability Insurance for Spray Foam Contractors",
-      "Off-Ratio Coverage for Spray Foam",
-      "Contractor Pollution Liability for Spray Foam",
-      "Workers' Compensation for Spray Foam Crews",
+      "SPF Contractor General Liability Insurance",
+      "Contractor Pollution Liability for Isocyanate Exposure",
+      "Workers' Compensation for SPF Applicators",
       "Commercial Auto Insurance for Spray Rigs",
-      "Tools and Equipment Coverage for Spray Foam",
-      "Commercial Umbrella for Spray Foam Contractors",
-      "Contractor License and Surety Bonds",
+      "SPF Rig and Equipment Insurance",
+      "Commercial Umbrella for SPF Contractors",
     ],
   };
 
