@@ -83,6 +83,8 @@ export const COPY = {
   blogPage: {
     metaTitle: "SPF Contractor Insurance Blog — Coverage Specifications & Technical Guides",
     metaDescription: "Technical coverage guides for spray polyurethane foam contractors — GL exclusions, isocyanate CPL, rig insurance, workers' comp class codes, and umbrella limits.",
+    ogTitle: "SPF Contractor Insurance Blog — Technical Guides",
+    ogDescription: "Coverage specification articles for SPF contractors — GL exclusions, isocyanate CPL, rig insurance, WC class codes, and umbrella limits.",
     h1Lead: "SPF insurance",
     h1Highlight: "technical guides",
     lead: "Coverage specification articles for spray polyurethane foam contractors — GL exclusions, isocyanate pollution liability, rig insurance, WC class codes, and commercial umbrella requirements.",
