@@ -1,28 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ============================================================
-   SPRAY FOAM INSURANCE AGENCY — "Industrial Energy" Design System
-   Light · corporate · clean · spray foam industrial motif
-   (token NAMES inherited; VALUES remapped: clay=vibrant orange,
-   sage=deep navy, gold=amber)
+   SPF INSURANCE — "Technical Precision" Design System
+   Light · corporate · clean · teal precision motif
+   (token NAMES inherited; VALUES remapped: clay=teal,
+   sage=deep navy/slate, gold=teal accent)
    ============================================================ */
 
 @layer base {
   :root {
-    --bg-cream: #FAF9F7;
-    --bg-sand: #EEF1F6;
-    --bg-white: #FFFFFF;
-    --clay: #D4600A;
-    --clay-dark: #A84A06;
-    --sage: #1C3A5F;
-    --gold: #E8A020;
-    --espresso: #0F1E33;
-    --cocoa: #2A3F5F;
-    --mocha: #5A6E8C;
-    --adobe: #D8E0EE;
+    --clay: #0d6e6e;
+    --clay-dark: #084f4f;
+    --clay-light: #139e9e;
+    --sage: #0f172a;
+    --sage-dark: #020617;
+    --sage-light: #1e293b;
+    --gold: #139e9e;
+    --gold-dark: #0d6e6e;
+    --gold-light: #20c0c0;
+    --espresso: #020617;
+    --cocoa: #0f172a;
+    --mocha: #64748b;
+    --bg-cream: #ffffff;
+    --bg-sand: #f1f5f9;
+    --bg-white: #ffffff;
+    --adobe: #e2e8f0;
     --radius: 1rem;
+    --font-headline: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-label: 'IBM Plex Mono', monospace;
   }
 
   * { border-color: var(--adobe); }
@@ -42,14 +52,14 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading), Georgia, serif;
+    font-family: var(--font-headline), system-ui, sans-serif;
     color: var(--espresso);
     letter-spacing: -0.015em;
     font-weight: 700;
   }
 
   ::selection {
-    background: rgba(212, 96, 10, 0.16);
+    background: rgba(13, 110, 110, 0.18);
     color: var(--espresso);
   }
 }
@@ -60,21 +70,21 @@
 
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
-           bg-clay text-white font-heading font-semibold text-base
+           bg-clay text-white font-headline font-semibold text-base
            shadow-warm hover:bg-clay-dark hover:shadow-warm-lg
            hover:-translate-y-0.5 transition-all duration-200
            focus:outline-none focus:ring-4 focus:ring-clay/25;
   }
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
-           bg-white text-espresso font-heading font-semibold text-base
+           bg-white text-espresso font-headline font-semibold text-base
            border-2 border-adobe hover:border-clay hover:text-clay
            hover:-translate-y-0.5 transition-all duration-200
            focus:outline-none focus:ring-4 focus:ring-clay/15;
   }
   .btn-sage {
     @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full
-           bg-sage text-white font-heading font-semibold text-base
+           bg-sage text-white font-headline font-semibold text-base
            shadow-warm hover:bg-sage-dark hover:shadow-warm-lg
            hover:-translate-y-0.5 transition-all duration-200
            focus:outline-none focus:ring-4 focus:ring-sage/25;
@@ -99,74 +109,74 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 6px;
-    background: linear-gradient(90deg, #D4600A 0%, #E8821E 24%, #1C3A5F 58%, #E8A020 100%);
+    background: linear-gradient(90deg, #084f4f 0%, #0d6e6e 40%, #139e9e 70%, #20c0c0 100%);
   }
-  .pill { @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider; }
+  .pill { @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-label font-semibold uppercase tracking-wider; }
   .pill-clay { @apply pill bg-clay/10 text-clay border border-clay/20; }
   .pill-sage { @apply pill bg-sage/10 text-sage-dark border border-sage/25; }
   .pill-gold { @apply pill bg-gold/20 text-gold-dark border border-gold/40; }
 
-  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.18em] text-clay; }
-  .h-section { @apply font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-espresso leading-[1.1]; }
+  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-label font-bold uppercase tracking-[0.18em] text-clay; }
+  .h-section { @apply font-headline font-bold text-3xl md:text-4xl lg:text-5xl text-espresso leading-[1.1]; }
   .lead { @apply text-lg md:text-xl text-mocha leading-relaxed; }
 
-  /* === Decorative motifs — "industrial energy" (spray foam contractor) === */
+  /* === Decorative motifs — "technical precision" (teal palette) === */
   .bg-sonoran {
-    background-color: var(--bg-cream);
+    background-color: #020617;
     background-image:
-      radial-gradient(circle at 15% 15%, rgba(212, 96, 10, 0.08) 0%, transparent 35%),
-      radial-gradient(circle at 85% 75%, rgba(28, 58, 95, 0.07) 0%, transparent 40%);
+      radial-gradient(circle at 15% 15%, rgba(13, 110, 110, 0.18) 0%, transparent 35%),
+      radial-gradient(circle at 85% 75%, rgba(19, 158, 158, 0.10) 0%, transparent 40%);
   }
   .bg-sonoran-sand {
     background-color: var(--bg-sand);
     background-image:
-      radial-gradient(circle at 70% 20%, rgba(212, 96, 10, 0.06) 0%, transparent 45%),
-      radial-gradient(circle at 20% 80%, rgba(232, 160, 32, 0.08) 0%, transparent 40%);
+      radial-gradient(circle at 70% 20%, rgba(13, 110, 110, 0.06) 0%, transparent 45%),
+      radial-gradient(circle at 20% 80%, rgba(13, 110, 110, 0.06) 0%, transparent 40%);
   }
   .bg-warm-radial {
     background:
-      radial-gradient(ellipse at top, rgba(212, 96, 10, 0.10) 0%, transparent 55%),
-      radial-gradient(ellipse at bottom right, rgba(28, 58, 95, 0.07) 0%, transparent 50%),
+      radial-gradient(ellipse at top, rgba(13, 110, 110, 0.08) 0%, transparent 55%),
+      radial-gradient(ellipse at bottom right, rgba(15, 23, 42, 0.05) 0%, transparent 50%),
       var(--bg-cream);
   }
-  /* Industrial band — layered orange, navy, amber */
+  /* Technical precision band — layered teal tones */
   .horizon-band {
     background: linear-gradient(180deg,
-      #D4600A 0% 18%, #E8821E 18% 34%, #E8A020 34% 48%,
-      #E8821E 48% 62%, #1C3A5F 62% 78%, #2E5A8E 78% 100%);
+      #084f4f 0% 20%, #0d6e6e 20% 42%, #139e9e 42% 58%,
+      #0d6e6e 58% 76%, #084f4f 76% 100%);
   }
   .grain {
     background-image:
-      repeating-linear-gradient(92deg, rgba(212,96,10,0.0) 0px, rgba(212,96,10,0.0) 10px, rgba(255,255,255,0.025) 10px, rgba(255,255,255,0.025) 11px),
+      repeating-linear-gradient(92deg, rgba(13,110,110,0.0) 0px, rgba(13,110,110,0.0) 10px, rgba(255,255,255,0.025) 10px, rgba(255,255,255,0.025) 11px),
       repeating-linear-gradient(88deg, rgba(0,0,0,0.0) 0px, rgba(0,0,0,0.0) 23px, rgba(0,0,0,0.03) 23px, rgba(0,0,0,0.03) 24px);
   }
   .dotted-warm {
-    background-image: radial-gradient(circle, rgba(212, 96, 10, 0.14) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(13, 110, 110, 0.14) 1px, transparent 1px);
     background-size: 24px 24px;
   }
   .arch-divider { position: relative; height: 3rem; width: 100%; }
   .arch-divider::after {
     content: ""; position: absolute; inset: 0; margin: auto;
     width: 10rem; height: 1.4rem;
-    background: linear-gradient(90deg, #D4600A 0% 18%, #E8821E 18% 40%, #E8A020 40% 62%, #1C3A5F 62% 82%, #D4600A 82% 100%);
+    background: linear-gradient(90deg, #084f4f 0% 20%, #0d6e6e 20% 50%, #139e9e 50% 80%, #084f4f 80% 100%);
     border-radius: 0.5rem; opacity: 0.92;
   }
 
   .prose-warm { @apply max-w-none; }
-  .prose-warm h2 { @apply font-heading font-bold text-2xl md:text-3xl text-espresso mt-12 mb-4; }
-  .prose-warm h3 { @apply font-heading font-bold text-xl md:text-2xl text-espresso mt-8 mb-3; }
+  .prose-warm h2 { @apply font-headline font-bold text-2xl md:text-3xl text-espresso mt-12 mb-4; }
+  .prose-warm h3 { @apply font-headline font-bold text-xl md:text-2xl text-espresso mt-8 mb-3; }
   .prose-warm p { @apply text-cocoa leading-relaxed mb-5 text-[1.05rem]; }
   .prose-warm ul { @apply my-5 space-y-2 pl-0 list-none; }
   .prose-warm li { @apply text-cocoa leading-relaxed pl-7 relative; }
   .prose-warm li::before {
     content: ""; position: absolute; left: 0; top: 0.55em;
     width: 1.1rem; height: 0.5rem;
-    background: linear-gradient(90deg, #D4600A 0% 35%, #E8A020 35% 70%, #1C3A5F 70% 100%);
+    background: linear-gradient(90deg, #084f4f 0% 35%, #0d6e6e 35% 70%, #139e9e 70% 100%);
     border-radius: 0.15rem 0.5rem 0.15rem 0.5rem; opacity: 0.9;
   }
   .prose-warm strong { @apply text-espresso font-semibold; }
-  .prose-warm a { @apply text-sage-dark font-semibold underline decoration-gold/60 underline-offset-2 hover:decoration-sage; }
-  .prose-warm blockquote { @apply border-l-4 border-sage pl-5 py-2 my-6 text-espresso italic font-heading; }
+  .prose-warm a { @apply text-clay font-semibold underline decoration-gold/60 underline-offset-2 hover:decoration-clay; }
+  .prose-warm blockquote { @apply border-l-4 border-clay pl-5 py-2 my-6 text-espresso italic font-headline; }
 }
 
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
