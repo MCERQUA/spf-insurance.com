@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${SITE.url}/locations/${slug}`;
   return {
     title: `${SITE.name} — ${loc.name}`,
-    description: `${loc.blurb} GL, off-ratio coverage, CPL, workers' comp, commercial auto, tools and equipment, and bonds for ${loc.name} spray foam contractors. 15-minute quotes.`,
+    description: `${loc.blurb} SPF contractor GL, CPL for isocyanate exposure, workers' comp, commercial auto, and rig insurance for ${loc.name} SPF applicators. 15-minute quotes.`,
     alternates: { canonical: url },
     openGraph: { title: `${SITE.name} — ${loc.name} | Contractors Choice Agency`, description: loc.blurb, url },
   };
