@@ -1,394 +1,589 @@
-// Rich, niche-accurate content blocks + centralized COPY for Spray Foam Insurance Agency.
-
 import {
   PhoneCall, FileSearch, FileSignature, ShieldCheck,
-  Droplets, Truck, HardHat, Wrench, Gauge, FileCheck,
+  Droplets, HardHat, Truck, Wrench, Umbrella, FlaskConical,
 } from "lucide-react";
 
-/* ============================================================
-   COPY — centralized display strings consumed by components/pages.
-   ============================================================ */
+// ============================================================
+// COPY — display strings for every section
+// ============================================================
 export const COPY = {
   hero: {
-    h1Lead: "Spray foam contractor insurance that covers",
-    h1Highlight: "the rig, the chemical, and the claim",
-    subcopy:
-      "General liability built for spray foam, off-ratio coverage, contractor pollution liability for VOC and isocyanate exposure, workers' comp, commercial auto for spray rigs, tools and equipment, umbrella, and bonds — purpose-built for spray foam insulation contractors. A-rated carriers. 15-minute quotes.",
-    statValue: "500+",
-    statLabel: "Spray foam contractors insured — applicators, insulation businesses, and specialty crews nationwide",
-    imageAlt: "Spray foam contractor applying closed-cell foam insulation in a commercial building",
+    eyebrow: "SPF Contractor Insurance Specialists",
+    h1Lead: "Insurance engineered for",
+    h1Highlight: "SPF applicators",
+    lead: "Coverage specifications built for spray polyurethane foam contractors — GL with isocyanate endorsements, contractor pollution liability for MDI/TDI exposure, rig insurance for your proportioner, and umbrella limits that meet GC requirements. All 50 states.",
+    cta1: "Get a quote",
+    cta2: "Call 844-967-5247",
+    quoteNote: "15-min quote · A-rated carriers · All 50 states",
   },
-  nav: { ariaLabel: "Spray Foam Insurance Agency home" },
+  nav: {
+    getQuote: "Get a Quote",
+  },
   footer: {
-    ctaTitle: "Ready to protect your spray foam business?",
-    ctaSubcopy: "15-minute quotes. 2-hour claims response. Insurance for spray foam contractors and insulation businesses nationwide.",
-    description:
-      "Specialized insurance for spray foam insulation contractors — GL with spray foam endorsements, off-ratio coverage, contractor pollution liability for VOC and isocyanate exposure, workers' comp, commercial auto for spray rigs, tools and equipment, umbrella, and bonds. A division of Contractors Choice Agency — founded 2005, licensed all 50 states.",
+    tagline: "Technical coverage for technical work.",
+    copyright: `© ${new Date().getFullYear()} Contractors Choice Agency. All rights reserved.`,
+    npnNote: "NPN #8608479 · Licensed all 50 states",
   },
   servicesGrid: {
-    h2Lead: "Coverage built specifically for",
-    h2Highlight: "spray foam contractors",
-    lead: "Standard contractor policies exclude the chemical-application exposure, off-ratio risk, and pollution claims that define spray foam work. We build programs designed for the actual risks of spray polyurethane foam insulation.",
+    eyebrow: "Coverage specifications",
+    h2Lead: "Six coverage lines",
+    h2Highlight: "for SPF contractors",
+    lead: "Standard contractor policies routinely exclude SPF work. Our coverage is written specifically for spray polyurethane foam applicators — correct class codes, isocyanate language, and off-ratio endorsements.",
+    quoteNote: "Need the full stack? We coordinate all lines on one account.",
   },
   why: {
-    eyebrow: "Why spray foam contractors switch to us",
-    h2Lead: "The coverage gaps that",
-    h2Highlight: "cost spray foam contractors the most",
-    lead: "Most insurance agents hand a spray foam contractor a generic GL policy and call it done. Then an off-ratio event, a VOC exposure claim, or a completed-operations lawsuit hits — and the exclusion language kicks in. We underwrite the parts of your operation everyone else leaves out.",
-    sidebarTitle: "Run by people who know the trades",
-    sidebarBody:
-      "Contractors Choice Agency was founded in 2005 by people from the contractor world. We know what spray foam equipment costs, what a proportioner failure looks like, and what happens when a chemical exposure claim lands.",
+    eyebrow: "Why SPF Insurance",
+    h2: "Built for SPF applicators — not generic contractors",
+    lead: "Most commercial insurance is written for standard construction. SPF application involves isocyanates, off-ratio risk, and classification challenges that standard policies routinely exclude or misprice.",
   },
   coverage: {
-    eyebrow: "Where we write",
-    h2Lead: "Spray foam contractor coverage.",
-    h2Highlight: "All 50 states.",
-    lead: "From Texas and Florida to the Northeast and Pacific Northwest, Contractors Choice Agency writes spray foam insurance in every state where insulation contractors operate.",
-    imageAlt: "Spray foam insulation contractor applying foam in a residential attic — national spray foam insurance coverage",
-    badgeTitle: "National coverage for spray foam contractors.",
-    badgeSub: "Writing spray foam programs in all 50 states since 2005.",
+    eyebrow: "Coverage area",
+    h2: "Writing SPF contractor insurance in all 50 states",
+    lead: "From Texas production SPF to Northeast commercial projects to California VOC-compliant applications — we write SPF contractor insurance nationwide with carriers familiar with the SPF classification landscape.",
   },
   process: {
-    lead: "No generic forms, no two-week delays. A real conversation about your foam operation, real markets that understand the chemical exposure, and a program you can actually understand — fast.",
+    eyebrow: "Process",
+    h2: "From application specs to bound coverage",
+    lead: "Our quoting process is built for SPF contractors. We collect the right underwriting data the first time — proportioner specs, chemical types, job classifications — and return bindable quotes, not estimates.",
   },
   testimonials: {
-    eyebrow: "From spray foam contractors",
-    h2Lead: "Contractors who found",
-    h2Highlight: "coverage that actually pays",
+    eyebrow: "SPF contractor clients",
+    h2Lead: "Contractors who",
+    h2Highlight: "switched to SPF-specific coverage",
+    lead: "SPF applicators who moved from generic contractor policies to SPF-specific coverage.",
   },
   finalCta: {
-    h2Lead: "Protect Your Spray Foam Business",
-    h2Highlight: "with coverage built for the chemical risk.",
-    lead: "Whether you need a GL policy with proper spray foam endorsements today, or a full program — CPL, off-ratio, workers' comp, auto, and tools — one call gets you real quotes from specialty markets that know the trade. Not a voicemail and a two-week wait.",
+    h2: "Get SPF-specific coverage in 15 minutes",
+    lead: "Our quoting team understands SPF classification, isocyanate exposure language, and off-ratio endorsements. Call or submit your specs now.",
+    cta1: "Request a quote",
+    cta2: "844-967-5247",
   },
   ctaBand: {
-    defaultTitle: "Ready to protect your spray foam operation?",
-    defaultDescription:
-      "Get a 15-minute quote from specialists who understand spray foam insulation — off-ratio risk, VOC and isocyanate exposure, equipment-intensive operations, and chemical-application liability.",
+    defaultTitle: "SPF contractor coverage — bound fast",
+    defaultDescription: "A-rated carriers, SPF-specific GL, CPL for isocyanate exposure, rig insurance, and umbrella limits that meet GC requirements. 15-minute quotes.",
   },
   faq: {
-    defaultTitleLead: "Spray foam contractor insurance,",
-    defaultTitleHighlight: "in plain English",
+    eyebrow: "Technical questions",
+    h2Lead: "SPF insurance",
+    h2Highlight: "FAQ",
   },
   servicesPage: {
-    metaTitle: "Spray Foam Contractor Insurance Coverage & Services",
-    metaDescription:
-      "Eight lines of insurance built for spray foam contractors: GL with spray foam endorsements, off-ratio coverage, contractor pollution liability, workers' comp, commercial auto, tools and equipment, umbrella, and bonds. Licensed all 50 states.",
-    h1Lead: "Insurance built line-by-line for",
-    h1Highlight: "spray foam contractors",
-    lead: "Each policy below addresses a specific exposure in spray foam insulation work — from the GL exclusions that catch foam contractors off guard to the contractor pollution liability your standard policy leaves out.",
-    ogTitle: "Spray Foam Contractor Insurance Coverage | Contractors Choice Agency",
-    ogDescription:
-      "GL with spray foam endorsements, off-ratio coverage, contractor pollution liability, workers' comp, commercial auto, tools and equipment, umbrella, and bonds — written specifically for spray foam insulation contractors.",
-    ctaTitle: "Not sure which lines you need?",
-    ctaDescription:
-      "Most spray foam contractors bundle GL + CPL + off-ratio + workers' comp + tools into one coordinated program. We'll build the right mix in one call.",
+    metaTitle: "SPF Contractor Insurance Coverage Lines",
+    metaDescription: "Six coverage lines for spray polyurethane foam contractors — SPF GL, contractor pollution liability, workers' comp, commercial auto, rig insurance, and umbrella. All 50 states.",
+    ogTitle: "SPF Contractor Insurance — Coverage Specifications",
+    ogDescription: "Precision insurance coverage for SPF applicators. Six lines: GL, CPL, WC, commercial auto, rig, umbrella.",
+    h1Lead: "Coverage specifications",
+    h1Highlight: "for SPF contractors",
+    lead: "Standard contractor GL routinely excludes SPF work by classification or pollution endorsement. Our six coverage lines are written specifically for spray polyurethane foam applicators — with the right class codes, chemical exposure language, and off-ratio endorsements.",
+    ctaTitle: "Need coverage across multiple lines?",
+    ctaDescription: "We coordinate GL, CPL, WC, commercial auto, rig insurance, and umbrella on a single SPF contractor account. One call, 15-minute turnaround.",
   },
   blogPage: {
-    metaTitle: "Spray Foam Contractor Insurance Blog — Guides & Insights",
-    metaDescription:
-      "Practical insurance guidance for spray foam contractors: GL exclusions, off-ratio coverage, contractor pollution liability, workers' comp class codes, and commercial auto for spray rigs.",
-    h1Lead: "Spray foam contractor insurance,",
-    h1Highlight: "decoded",
-    lead: "Plain-English guides on the coverage that matters for spray foam insulation businesses — off-ratio risk, VOC and isocyanate liability, GL exclusions, and workers' comp for applicator crews.",
-    ogTitle: "Spray Foam Contractor Insurance Blog | Contractors Choice Agency",
-    ogDescription:
-      "Practical insurance guidance for spray foam contractors: GL exclusions, off-ratio coverage, contractor pollution liability, workers' comp class codes, and commercial auto for spray rigs.",
+    metaTitle: "SPF Contractor Insurance Blog — Coverage Specifications & Technical Guides",
+    metaDescription: "Technical coverage guides for spray polyurethane foam contractors — GL exclusions, isocyanate CPL, rig insurance, workers' comp class codes, and umbrella limits.",
+    h1Lead: "SPF insurance",
+    h1Highlight: "technical guides",
+    lead: "Coverage specification articles for spray polyurethane foam contractors — GL exclusions, isocyanate pollution liability, rig insurance, WC class codes, and commercial umbrella requirements.",
   },
   serviceDetail: {
-    h1Suffix: "for spray foam contractors",
-    imageAltSuffix: "spray foam insulation contracting",
-    category: "Spray Foam Contractor Insurance",
+    h1Suffix: "for SPF Contractors",
+    imageAltSuffix: "SPF Contractor Insurance Coverage",
+    category: "SPF Contractor Insurance",
   },
   about: {
-    metaTitle: "About Spray Foam Insurance Agency | Contractors Choice Agency",
-    metaDescription:
-      "Spray Foam Insurance Agency is the spray foam–focused division of Contractors Choice Agency, founded in 2005. GL with spray foam endorsements, off-ratio coverage, CPL, and workers' comp for spray foam contractors. Licensed all 50 states.",
-    h1Lead: "Built by people who know the trades,",
-    h1Highlight: "for spray foam contractors",
-    lead: "Spray Foam Insurance Agency is the spray foam–focused division of Contractors Choice Agency — founded in 2005 by Josh Cotner, who knows exactly what happens when a GL exclusion or a missing CPL policy shows up in a claim denial for a spray foam contractor.",
-    imageAlt: "A spray foam contractor in full PPE applying closed-cell foam insulation on a commercial jobsite",
-    storyEyebrow: "Our story",
-    storyTitle: "From the jobsite to the agency.",
-    storyLead:
-      "Josh Cotner ran equipment, read specs, and filed certificates before founding CCA in 2005. That background is why we understand what's at stake when a spray foam contractor's GL policy excludes the claim or a CPL is missing and a VOC exposure lands.",
-    valuesTitle: "Four things we won't compromise on.",
-    timeline: [
-      { year: "2005", title: "Contractors Choice Agency founded", desc: "Josh Cotner opens CCA in Chandler, AZ, after years working in the trades — built to insure contractors, specialty operators, and trades the right way." },
-      { year: "10 yrs", title: "Expanded to specialty contractor markets", desc: "After placing programs for dozens of specialty trades, CCA extends deep expertise to high-risk chemical applicators including spray foam, polyurea, and insulation contractors." },
-      { year: "Today", title: "Dedicated spray foam division", desc: "Spray Foam Insurance Agency focuses CCA's expertise on spray polyurethane foam contractors — operations where off-ratio risk, CPL, and GL exclusions are the real exposures." },
-    ],
-    values: [
-      { icon: "HardHat", title: "Contractor-first, always", desc: "Josh spent years in the trades before starting the agency. We speak the language of spray foam contracting because we know what happens when coverage fails at claim time." },
-      { icon: "ShieldCheck", title: "Coverage that closes the gaps", desc: "GL exclusions for chemical application, missing CPL, no off-ratio coverage — we address the risks standard contractor markets miss entirely." },
-      { icon: "Award", title: "A-rated markets only", desc: "We shop carriers with the financial strength and contractor experience to be there when an off-ratio event, a pollution claim, or a completed-operations lawsuit hits." },
-      { icon: "Handshake", title: "Honest, no-pressure advice", desc: "If you don't need a line of coverage, we'll tell you. We earn trust by being straight about what your spray foam operation actually requires." },
-    ],
+    eyebrow: "About SPF Insurance",
+    h1: "Coverage specialists for the SPF trade",
+    lead: "Contractors Choice Agency has placed commercial insurance for spray polyurethane foam applicators since 2005. We understand SPF classification challenges, isocyanate exposure language, and the off-ratio endorsements that make SPF GL actually work.",
+    missionTitle: "Technical precision, not boilerplate coverage",
+    missionText: "Standard contractor insurance is written for framers, plumbers, and electricians. SPF application involves isocyanates, reactive chemistry, and completed-operations exposure that generic policies exclude or misprice. We built SPF Insurance to fill that gap — coverage specifications matched to the technical demands of SPF work.",
+    valuesTitle: "What makes us different",
   },
   quote: {
-    h1Lead: "Get your",
-    h1Highlight: "spray foam contractor insurance quote",
-    lead: "Tell us about your spray foam operation. We'll shop A-rated specialty markets and come back with real quotes in about 15 minutes — no obligation.",
-    businessPlaceholder: "Apex Spray Foam LLC",
-    emailPlaceholder: "owner@apexsprayfoam.com",
-    phonePlaceholder: "(512) 555-0100",
-    messagePlaceholder:
-      "Jobs you do (residential, commercial, roofing), equipment and rig count, crew size, states where you work, coverage lines needed, current insurer, loss history, or anything else that helps us quote accurately…",
-    errorMessage: "Something went wrong. Please call us at 844-967-5247 or try again.",
-    trustNicheTitle: "Built for spray foam contractors",
-    trustNicheDesc: "Policies written for spray foam operations — not generic contractor coverage.",
+    eyebrow: "Request a quote",
+    h1: "SPF contractor insurance quote",
+    lead: "Submit your application specs and we'll return bindable quotes from A-rated SPF-specialist carriers within 15 minutes during business hours.",
+    formNote: "Typical info needed: business name, states of operation, annual revenue, SPF volume (board-feet or tons), crew size, proportioner specs, and loss history.",
   },
   contact: {
-    h1Lead: "Let's talk about your",
-    h1Highlight: "spray foam contractor coverage",
-    lead: "Questions, a quote, or a claim — reach a person who knows spray foam insulation, not a queue.",
-    errorMessage: "Something went wrong. Please call us at 844-967-5247.",
+    eyebrow: "Contact",
+    h1: "Talk to an SPF insurance specialist",
+    lead: "Our team understands SPF classification, isocyanate exposure endorsements, and off-ratio coverage. Call, email, or submit a message.",
   },
   coveragePage: {
-    metaTitle: "Spray Foam Contractor Insurance — National Coverage, All 50 States",
-    metaDescription:
-      "Contractors Choice Agency writes spray foam contractor insurance in all 50 states — Texas, Florida, the Northeast, Midwest, California, Mountain States, and everywhere spray foam insulation contractors operate.",
-    h1Lead: "National reach.",
-    h1Highlight: "All 50 states, every spray foam market.",
-    lead: "Contractors Choice Agency places spray foam insurance programs in all 50 states — from Texas and Florida to the Northeast, Midwest, and Pacific Northwest.",
-    sectionTitle: "Spray foam contractor regions we serve.",
-    nationwideLead:
-      "Whether your spray foam business is in Texas, Florida, the Northeast, the Mountain States, or anywhere in between — one agent, one coordinated program. NPN #8608479.",
+    metaTitle: "SPF Contractor Insurance — Coverage Area (All 50 States)",
+    metaDescription: "SPF Insurance writes spray polyurethane foam contractor coverage in all 50 states — from Texas and the Southwest to California, the Northeast, and the Pacific Northwest.",
+    h1Lead: "SPF contractor insurance",
+    h1Highlight: "nationwide",
+    lead: "We write SPF contractor GL, CPL, workers' comp, commercial auto, rig insurance, and umbrella in all 50 states — with carriers familiar with SPF classification in each market.",
+    sectionTitle: "Key SPF contractor markets",
+    nationwideLead: "Regardless of your state or SPF application type — residential closed-cell, commercial roofing, cold storage, or agricultural — we write bindable coverage through A-rated carriers licensed in your state.",
     faqs: [
-      { q: "Do you only insure spray foam contractors in certain states?", a: "No. Contractors Choice Agency is licensed in all 50 states and writes spray foam programs for contractors anywhere in the country — Texas, Florida, the Northeast, Midwest, California, Mountain States, Pacific Northwest, and everywhere in between." },
-      { q: "Can you write coverage if we work across state lines?", a: "Yes. We structure programs so your GL, CPL, workers' comp, and commercial auto coordinate across state lines without gaps — including spray rigs that travel for commercial and industrial jobs." },
-      { q: "Do you understand the specific risks in my state's spray foam market?", a: "Yes. We work with specialty markets that understand regional differences — California VOC regulations, Texas high-volume new construction, Northeast retrofit work, and Mountain State cold-weather application risk." },
-      { q: "Can you coordinate coverage across multiple jobsites and locations?", a: "Yes. If you operate crews across multiple states or have multiple rigs, we build one coordinated program that covers all locations, vehicles, and crews with no gaps." },
+      { q: "Do you write SPF insurance in all 50 states?", a: "Yes. Contractors Choice Agency is licensed in all 50 states and writes SPF contractor insurance — GL, CPL, WC, commercial auto, rig insurance, and umbrella — in every state through admitted and E&S carriers." },
+      { q: "Can you insure SPF contractors in California with its VOC restrictions?", a: "Yes. California SPF contractors face strict VOC regulations and California-specific surplus line requirements. We work with California-licensed carriers who understand the state's SPF regulatory environment." },
     ],
   },
-} as const;
+};
 
-/* ============================================================
-   PROCESS
-   ============================================================ */
+// ============================================================
+// PROCESS — 4-step SPF quote process
+// ============================================================
 export const PROCESS = [
-  { step: "01", icon: PhoneCall, title: "Tell us about your spray foam operation", description: "15-min call or form. Crew size, equipment, jobs you do (residential, commercial, roofing), states where you work, and the coverage lines you need." },
-  { step: "02", icon: FileSearch, title: "We shop specialty contractor markets", description: "Niche markets that actually write spray foam GL with proper endorsements, off-ratio coverage, and CPL — not generic contractor forms that carve out chemical application." },
-  { step: "03", icon: FileSignature, title: "Bind a program built for foam work", description: "GL + CPL + off-ratio + workers' comp + tools + auto, coordinated so there are no gaps across your rig, your crew, and your completed jobs." },
-  { step: "04", icon: ShieldCheck, title: "Claims support that moves fast", description: "When an off-ratio event, a VOC complaint, or a property-damage claim arrives, you reach a person who knows spray foam — not a queue. 2-hour response." },
-] as const;
+  {
+    step: "01",
+    icon: PhoneCall,
+    title: "Submit your specs",
+    description: "Call or submit your SPF application specs — proportioner type, chemical classifications, annual volume (board-feet or tons), crew size, and states of operation.",
+  },
+  {
+    step: "02",
+    icon: FileSearch,
+    title: "We shop SPF markets",
+    description: "We approach A-rated carriers with SPF-specific programs — matching your class codes, isocyanate exposure classification, and off-ratio endorsement requirements.",
+  },
+  {
+    step: "03",
+    icon: FileSignature,
+    title: "Review and bind",
+    description: "We return bindable quotes, not estimates. Review coverage specifications, confirm limits and endorsements, and bind — certificates issued same day.",
+  },
+  {
+    step: "04",
+    icon: ShieldCheck,
+    title: "Ongoing account management",
+    description: "Annual reviews, certificate management, audit support, and claims coordination. We track SPF market changes so your coverage specs stay current.",
+  },
+];
 
-/* ============================================================
-   WHY CHOOSE US
-   ============================================================ */
+// ============================================================
+// WHY CHOOSE — 6 differentiators
+// ============================================================
 export const WHY_CHOOSE = [
-  { icon: ShieldCheck, title: "GL built for spray foam — not a generic form", description: "Most contractor GL policies exclude chemical application, restrict completed-operations for foam, or cap coverage at amounts that don't reflect the real cost of a spray foam claim. We place forms that match the actual exposure." },
-  { icon: Gauge, title: "Off-ratio coverage no one else offers", description: "When the A:B component ratio is wrong, foam doesn't cure right — and the resulting property damage and chemical exposure claims are excluded by nearly every standard GL. We place off-ratio as a distinct, insurable risk." },
-  { icon: Droplets, title: "CPL for VOC and isocyanate exposure", description: "Spray foam releases volatile organic compounds and MDI isocyanates that can cause third-party bodily injury claims. Standard GL excludes these under the pollution exclusion. Contractor Pollution Liability closes that gap." },
-  { icon: Wrench, title: "Equipment coverage for proportioners and rigs", description: "A proportioning machine alone can be worth $80,000+. Tools and equipment coverage insures your spray guns, heated hoses, generators, and rigs against theft, damage, and breakdown on the jobsite." },
-  { icon: HardHat, title: "Workers' comp with correct class codes", description: "Spray foam workers' comp is often miscoded under generic insulation or painting codes, resulting in audit surprises and coverage gaps. We assign codes to your actual workflow — applicators, helpers, and supervisors." },
-  { icon: Truck, title: "Commercial auto for spray rigs on the road", description: "A rig with a proportioner and chemical tanks is not just a pickup truck. We structure commercial auto for the vehicle, the equipment on it, and the liability when a spray rig is in transit or parked on a jobsite." },
-] as const;
+  {
+    icon: FlaskConical,
+    title: "SPF classification expertise",
+    description: "We understand NCCI and ISO class codes for spray foam applicators — the difference between an accurately classified policy and one that excludes your work at claims time.",
+  },
+  {
+    icon: Droplets,
+    title: "Isocyanate exposure language",
+    description: "MDI and TDI are pollutants under standard GL pollution exclusions. We place CPL coverage with trigger language that actually responds to isocyanate exposure events.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Off-ratio endorsements",
+    description: "Standard GL excludes off-ratio SPF events as 'expected or intended injury.' We secure endorsements that cover off-ratio application claims — the most common SPF GL dispute.",
+  },
+  {
+    icon: Wrench,
+    title: "Rig and equipment coverage",
+    description: "Your proportioner isn't covered by commercial auto. We write inland marine equipment floaters matched to proportioner replacement values and heated hose assemblies.",
+  },
+  {
+    icon: Umbrella,
+    title: "GC umbrella compliance",
+    description: "We build umbrella stacks — GL + CPL + umbrella — that satisfy $5M and $10M GC certificate requirements for commercial SPF subcontracting.",
+  },
+  {
+    icon: HardHat,
+    title: "WC audit management",
+    description: "SPF WC audits are high-risk for payroll misclassification. We review your crew structure and job classifications before placement to minimize audit exposure.",
+  },
+];
 
-/* ============================================================
-   HOMEPAGE FAQ — 20 questions
-   ============================================================ */
+// ============================================================
+// HOME_FAQS — 20 SPF-specific Q&A
+// ============================================================
 export const HOME_FAQS = [
-  { q: "What insurance does a spray foam contractor need?", a: "A working spray foam contractor typically needs general liability with spray foam endorsements, contractor pollution liability (CPL) for VOC and isocyanate exposure, off-ratio coverage for A:B component mix errors, workers' compensation, commercial auto for spray rigs, tools and equipment coverage, a commercial umbrella, and contractor bonds. Most spray foam businesses carry all eight as one coordinated program." },
-  { q: "How much does spray foam contractor insurance cost?", a: "Cost depends on annual revenue, crew size, types of jobs (residential, commercial, industrial), states where you work, equipment value, and loss history. Small residential-only spray foam contractors may pay a few thousand a year; larger commercial operations with significant equipment and payroll run considerably more. We quote your actual operation in about 15 minutes — never a generic estimate." },
-  { q: "Does a standard contractor GL policy cover spray foam work?", a: "Often not. Most generic contractor GL policies contain exclusions for chemical application, completed-operations for foam products, or pollution events from VOCs and isocyanates. Spray foam contractors need GL forms that include proper spray foam endorsements and don't carve out the primary risks of the trade." },
-  { q: "What is off-ratio coverage and why do I need it?", a: "Off-ratio occurs when the A-component (isocyanate) and B-component (polyol) in spray polyurethane foam are mixed at the wrong ratio. The foam doesn't cure correctly, can off-gas harmful chemicals, and causes property damage — claims that are explicitly excluded by most standard GL policies. Off-ratio coverage insures this specific risk as a standalone event." },
-  { q: "What is Contractor Pollution Liability (CPL) for spray foam?", a: "CPL covers third-party bodily injury and property damage from chemical releases during spray foam application — VOC off-gassing, MDI isocyanate exposure, blowing agent releases, and related events. Standard GL policies exclude these under the pollution exclusion. CPL fills that gap." },
-  { q: "Are VOC and isocyanate exposure claims covered by standard GL?", a: "No. Volatile organic compounds and MDI isocyanates released during spray foam application are treated as pollutants under standard GL policies, placing those claims under the pollution exclusion. Only a dedicated Contractor Pollution Liability policy covers bodily injury and property damage from chemical exposure." },
-  { q: "Do I need workers' comp if I have spray foam employees?", a: "In most states, yes — workers' comp is required once you have employees, and spray foam work is high-hazard. Chemical inhalation, confined-space exposure, fall hazards, and exothermic reaction burns are common injury patterns. Proper workers' comp with correct class codes for spray foam crews is essential." },
-  { q: "What class codes apply to spray foam workers?", a: "Spray foam workers are often miscoded under generic insulation (class code 5473) or painting codes. The correct code matters because it affects premium, coverage scope at audit, and whether a chemical-exposure injury is properly recognized. We assign codes to your actual workflow — applicators, helpers, and estimators." },
-  { q: "Is my spray rig or proportioning machine covered under commercial auto?", a: "The proportioner and equipment mounted on the rig are not automatically covered by auto insurance — they need inland marine or tools and equipment coverage. The vehicle itself needs commercial auto with proper endorsements for equipment-carrying vehicles. We coordinate both so there's no gap." },
-  { q: "What equipment should I insure as a spray foam contractor?", a: "At minimum: your proportioning machine, spray gun and hoses, heated hose set, transfer pumps, generators, and the vehicle the equipment rides on. A proportioner alone can be worth $60,000–$120,000. Tools and equipment coverage insures these against theft, damage, and breakdown on or off the jobsite." },
-  { q: "Does commercial umbrella cover spray foam claims?", a: "Yes — commercial umbrella sits above your GL, auto, and workers' comp to cover claims that exceed underlying limits. Given that a single off-ratio event or fire claim can run into the hundreds of thousands, most spray foam contractors doing commercial work should carry an umbrella." },
-  { q: "Do I need a bond to work as a spray foam contractor?", a: "Many states require a contractor license bond as a condition of licensing. General contractors and commercial project owners often require performance and payment bonds for spray foam subcontractors. We issue contractor bonds quickly — often same-day — and coordinate them with your liability program." },
-  { q: "Can you insure a spray foam contractor who has been declined before?", a: "Often yes. We have admitted and excess-and-surplus (E&S) markets for spray foam contractors declined over prior claims, CPL history, high chemical exposure, or other issues. Bring us what you have and we'll find a market." },
-  { q: "What happens if I do both open-cell and closed-cell spray foam?", a: "Both types carry similar liability exposures but different application risks. Open-cell foam is more common in residential applications; closed-cell is used in commercial, roofing, and cold-climate work. We account for both in the program — including the higher chemical concentrations in closed-cell applications." },
-  { q: "Is spray foam roofing covered the same as standard spray foam?", a: "Not automatically. Spray polyurethane foam (SPF) roofing systems involve additional exposures — roof-level fall hazards, UV coating application, and different completed-operations claims patterns. We specifically address roofing foam application in the GL and CPL so those jobs are covered." },
-  { q: "What if a homeowner claims the spray foam damaged their home?", a: "Property-damage completed-operations claims — foam expansion into HVAC systems, incorrect application causing structural issues, or off-ratio foam that must be removed — are covered under a properly structured GL policy with spray foam endorsements. Without those endorsements, the claim can be excluded." },
-  { q: "Do you write spray foam contractor insurance in all 50 states?", a: "Yes. Contractors Choice Agency is licensed in all 50 states and has markets for spray foam operations whether your business is in Texas, Florida, the Northeast, Midwest, California, or anywhere in between." },
-  { q: "How fast can we get a spray foam contractor insurance quote?", a: "Typically 15 minutes on a call. For larger programs with significant commercial work or high equipment values, we may need a day or two to involve the right markets — but we move fast and tell you the timeline up front." },
-  { q: "Should I bundle all my spray foam coverage with one program?", a: "Usually yes. Bundling GL + CPL + workers' comp + auto + tools into one coordinated program closes gaps between policies — especially between GL and CPL where most spray foam claims fall in the gray zone — and is typically cheaper and easier to manage at claim time." },
-  { q: "Can I get insurance if I just started my spray foam business?", a: "Yes. New spray foam contractors can be harder to place with some markets, but we have programs for startups and recently-established businesses. The key is having proper equipment, PPE protocols, and training in place — we'll help you document what underwriters want to see." },
+  {
+    q: "Why does standard general liability exclude SPF work?",
+    a: "Standard GL policies exclude SPF work through two mechanisms: (1) classification exclusions — if your operations aren't listed or are excluded in the policy declarations, claims can be denied; and (2) pollution exclusions — isocyanates and blowing agents are classified as pollutants under standard ISO pollution exclusion language. SPF-specific GL addresses both with correct class codes and isocyanate coverage endorsements.",
+  },
+  {
+    q: "What is an off-ratio exclusion in standard GL?",
+    a: "An off-ratio event occurs when the A-component (isocyanate) and B-component (polyol) are mixed at the wrong ratio during application, resulting in soft foam, incomplete cure, or chemical release. Standard GL policies frequently exclude off-ratio events as 'expected or intended injury' or under separate product exclusions. SPF-specific GL endorsements cover off-ratio application claims as covered occurrences.",
+  },
+  {
+    q: "What is Contractor Pollution Liability (CPL) and why do SPF contractors need it?",
+    a: "CPL covers third-party bodily injury and property damage arising from pollutant releases during your contracting operations. For SPF contractors, this means MDI/TDI isocyanate exposure, amine catalyst off-gassing, and blowing agent releases. Standard GL pollution exclusions exclude these events entirely — CPL fills that coverage gap.",
+  },
+  {
+    q: "What MDI/TDI exposure events does CPL typically cover?",
+    a: "CPL covers third-party claims arising from: isocyanate off-gassing during and after SPF application, blowing agent releases (CO2, HFO, water-blown), amine catalyst exposure, respiratory sensitization complaints from building occupants, and indoor air quality claims post-application. The trigger language in the CPL policy determines what's covered — we review trigger definitions carefully for SPF applicators.",
+  },
+  {
+    q: "What is the A-component and B-component in SPF, and how does it affect coverage?",
+    a: "The A-component is the isocyanate (typically MDI — methylene diphenyl diisocyanate). The B-component is the polyol blend (resin side), which includes polyols, flame retardants, surfactants, catalysts, and blowing agents. Insurance classification treats the isocyanate A-side as the primary pollutant exposure. Both components require proper chemical classification in your policy — particularly for CPL trigger language.",
+  },
+  {
+    q: "Does my commercial auto policy cover my spray foam proportioner?",
+    a: "No. Commercial auto policies cover the vehicle — the truck or trailer — as a scheduled vehicle. The proportioner unit, heated hose assemblies, spray guns, and ancillary equipment are not covered under commercial auto. These require a separate inland marine equipment floater (rig insurance). We write both coverages and coordinate them to eliminate the equipment coverage gap.",
+  },
+  {
+    q: "What is SPF rig insurance and what does it cover?",
+    a: "SPF rig insurance is an inland marine equipment floater covering your spray foam proportioner machine, heated hose assemblies, spray guns, drum heaters, generators, and ancillary equipment. Coverage applies on-site, in-transit, and at your yard or storage location. Proportioner replacement values range from $15,000 to $80,000+ — most SPF contractors are significantly underinsured on equipment without a separate floater.",
+  },
+  {
+    q: "What workers' comp class codes apply to SPF applicators?",
+    a: "SPF applicators typically fall under NCCI class codes in the insulation contractor range (5183 — Plumbing, Heating, Ventilation; or specialty codes depending on state). Some states use Bureau-specific codes for spray foam applicators. Misclassification at WC placement often results in large audit charges. We review class code assignment with carriers familiar with spray foam operations before binding.",
+  },
+  {
+    q: "How does named insured structure affect SPF coverage?",
+    a: "Named insured structure matters for SPF contractors with multiple crews, DBAs, or related entities. If your spray foam crews operate under different entity names or you use 1099 subcontractors for SPF work, the named insured must reflect the actual risk — or claims can be denied. We review entity structure and subcontractor use during the application process.",
+  },
+  {
+    q: "Does my SPF GL cover subcontractors I hire for spray foam work?",
+    a: "Not automatically. Standard GL policies exclude subcontractor work unless specifically endorsed. SPF GL policies require subcontractor scheduling or blanket subcontractor coverage endorsements for hired SPF crews to be covered. We review subcontractor certificates and ensure your policy responds to both your direct operations and any hired SPF subcontractors.",
+  },
+  {
+    q: "What is the difference between admitted and surplus-line carriers for SPF insurance?",
+    a: "Admitted carriers are licensed by state insurance departments and provide state guaranty fund protection. Surplus-line (E&S) carriers operate outside standard admitted markets and can write risks that admitted carriers decline — including many SPF applicator accounts. Most SPF contractor GL and CPL is placed in E&S markets through approved surplus line brokers. We are licensed to place both admitted and E&S coverage in all 50 states.",
+  },
+  {
+    q: "What umbrella limits do commercial GCs require from SPF subcontractors?",
+    a: "Commercial GCs and property owners increasingly require $5M to $10M umbrella limits from SPF subcontractors, particularly on large commercial, industrial, and institutional projects. The umbrella must follow form over your SPF GL and ideally your CPL as well. We build the full coverage stack — GL + CPL + umbrella — to satisfy GC certificate requirements.",
+  },
+  {
+    q: "How do I get a certificate of insurance showing SPF coverage for a GC with a spray foam exclusion?",
+    a: "Many GC master policies include spray foam exclusions in their own GL. When a GC requires an SPF subcontractor to carry coverage, they typically require the subcontractor's GL to be SPF-specific and may require confirmation that the GL does not itself contain a spray foam exclusion. We issue certificates that accurately reflect your SPF-specific coverage and can provide policy language excerpts for GC compliance review.",
+  },
+  {
+    q: "Can I get SPF insurance if I've had prior GL claims from foam defects?",
+    a: "Claim history affects placement but does not automatically disqualify coverage. SPF-specific E&S markets underwrite completed-operations losses on a case-by-case basis. We present your claim history with context — type of loss, root cause, remediation taken — to carriers most likely to write your risk. Some markets will add specific exclusions rather than decline entirely.",
+  },
+  {
+    q: "What SPF application types affect my insurance classification?",
+    a: "Application type affects class code, premium, and coverage availability: (1) closed-cell roofing SPF — higher completed-operations exposure; (2) open-cell residential insulation — lower chemical exposure profile; (3) cold storage and agricultural applications — specialty markets; (4) marine applications — separate specialty classification. We match your application mix to the right carrier program.",
+  },
+  {
+    q: "How is SPF workers' comp premium calculated?",
+    a: "SPF WC premium is calculated on payroll at rates specific to your class code. Some states use dual-wage rules that apply different rates based on hourly wage thresholds. Premium adjustments occur at audit based on actual payroll. We review your payroll allocation — distinguishing applicator payroll from clerical and driver payroll — to ensure accurate classification and minimize audit exposure.",
+  },
+  {
+    q: "Does commercial auto insurance cover chemical loads in my SPF truck?",
+    a: "Standard commercial auto does not cover chemical cargo (A and B component drums) as cargo coverage — and may exclude pollution liability arising from chemical spills during transport. A pollution endorsement on commercial auto or a separate CPL policy is needed to cover chemical release events during transport. We coordinate commercial auto and CPL to eliminate this gap.",
+  },
+  {
+    q: "What is a proportioner and why does its value matter for insurance?",
+    a: "A proportioner is the core SPF equipment — a heated, high-pressure machine that meters and mixes the A and B components at the correct ratio before atomizing through the spray gun. New proportioner prices range from $20,000 to $80,000+ depending on output capacity and heater specs. Without an equipment floater, a proportioner loss is typically uninsured or underinsured under commercial auto. We insure proportioners at agreed-value or replacement-cost basis.",
+  },
+  {
+    q: "How long does it take to get SPF contractor insurance?",
+    a: "Most SPF contractor insurance quotes are returned within 15 minutes of receiving complete application information during business hours. Binding typically occurs same-day. Certificates are issued the same day as binding. Complex risks with claim history or large commercial operations may take 24–48 hours for full market review.",
+  },
+  {
+    q: "What information do you need to quote SPF contractor insurance?",
+    a: "To quote SPF contractor GL, CPL, WC, commercial auto, rig, and umbrella, we typically need: (1) business entity name and state of formation; (2) states of operation; (3) years in business; (4) annual revenue and SPF-specific revenue; (5) SPF application types (open-cell, closed-cell, roofing, residential, commercial); (6) crew size and payroll breakdown; (7) proportioner make/model and replacement value; (8) vehicle count and VINs; (9) 5-year loss history.",
+  },
 ];
 
-/* ============================================================
-   GENERAL FAQ — pads service & location pages to 20.
-   ============================================================ */
+// ============================================================
+// GENERAL_FAQS — 14 Q&A for service/location pages
+// ============================================================
 export const GENERAL_FAQS = [
-  { q: "How much does spray foam contractor insurance cost?", a: "Cost is driven by annual revenue, crew size, job type (residential, commercial, roofing), states where you operate, equipment values, and loss history. We quote your actual operation in about 15 minutes — never a ballpark from a generic contractor form." },
-  { q: "Do you write spray foam insurance in all 50 states?", a: "Yes. Contractors Choice Agency is licensed in all 50 states and writes spray foam programs nationwide — Texas, Florida, the Northeast, Midwest, California, Mountain States, and everywhere spray foam contractors operate." },
-  { q: "How fast can we get a quote?", a: "Typically 15 minutes on a call. Larger or higher-risk programs may take a day or two to place with the right markets, but we move fast and set expectations up front." },
-  { q: "Will you insure a spray foam contractor who has been declined or has prior claims?", a: "Often yes. We have admitted and E&S markets for spray foam contractors declined over CPL history, prior claims, or other issues. Bring us your situation and we'll find a market." },
-  { q: "Should I bundle all my spray foam coverage with one program?", a: "Usually yes. A coordinated program — especially one that aligns GL and CPL — closes the gaps where most spray foam claims fall and is typically cheaper than separate policies from separate carriers." },
-  { q: "What does an A-rated carrier mean and why does it matter?", a: "A.M. Best ratings reflect a carrier's financial strength. We place coverage with A-rated carriers so the coverage is there when an off-ratio event, a pollution claim, or a property-damage lawsuit hits." },
-  { q: "Do you insure both residential and commercial spray foam contractors?", a: "Yes. Residential foam contractors carry completed-operations and off-ratio exposure; commercial contractors add higher limits requirements, GC bonding, and larger pollution exposure. We tailor the program to your actual work mix." },
-  { q: "How are completed-operations claims handled for spray foam work?", a: "Completed-operations covers claims that arise after the job is done — foam that off-gasses, expands incorrectly, or causes property damage. These claims need to be explicitly included in the GL policy; many generic contractor forms sub-limit or exclude spray foam completed-ops." },
-  { q: "What information do you need to quote my spray foam business?", a: "Annual revenue, crew size, job types (residential, commercial, roofing foam), equipment list and values, states where you work, current coverage, and loss history. The more detail, the more accurate and competitive the quote." },
-  { q: "Does spray foam insurance cover subcontractor crews?", a: "It depends on the structure. If you 1099 subs, you need to verify they carry their own GL and workers' comp — or add them as additional insureds. We help you structure a program that doesn't create gaps when subs are on your jobsites." },
-  { q: "Are newly established spray foam contractors insurable?", a: "Yes, though some markets are more restrictive for startups. Having proper PPE, documented safety protocols, and trained applicators makes placement easier and pricing more competitive. We'll help you document what underwriters want to see." },
-  { q: "What happens if my proportioner or spray equipment is stolen from the jobsite?", a: "Tools and equipment coverage pays for the stolen equipment. Standard commercial auto covers the vehicle, but the spray gun, hoses, and proportioner on it need dedicated inland marine or tools coverage to be insured against theft or damage on a jobsite." },
-  { q: "Can you coordinate coverage across multiple rigs and crews?", a: "Yes. If you operate multiple spray rigs and crews, we build one coordinated program covering all vehicles, equipment, and workers with no gaps — including fleet auto and a blanket tools policy." },
-  { q: "Do you offer guidance on applicator certification and underwriting requirements?", a: "We help you understand what underwriters require in terms of applicator certification (SPFA training, BPI, etc.) and can structure your program to reflect your crew's credentials, which can improve both placement and pricing." },
+  {
+    q: "Is SPF contractor GL different from standard contractor GL?",
+    a: "Yes. SPF-specific GL is endorsed to cover isocyanate exposure events and off-ratio application claims that standard GL pollution exclusions and product exclusions eliminate. A standard contractor GL policy will typically deny SPF-related claims.",
+  },
+  {
+    q: "Do I need both GL and CPL as an SPF contractor?",
+    a: "In most cases, yes. GL covers general bodily injury and property damage from your operations. CPL specifically covers pollutant-triggered claims — isocyanate and VOC exposure events that fall under GL pollution exclusions. The two policies work together to provide complete coverage for SPF applicators.",
+  },
+  {
+    q: "Are SPF-specific insurance programs available in my state?",
+    a: "Yes. We write SPF contractor insurance in all 50 states through admitted and E&S carriers. Some states have more SPF carrier options than others — California, Texas, and Florida have the deepest SPF markets.",
+  },
+  {
+    q: "What does A-rated carrier mean and why does it matter?",
+    a: "A.M. Best assigns financial strength ratings to insurance carriers. A-rated carriers have demonstrated strong financial strength and are required by most commercial contracts. We place SPF insurance exclusively through A-rated and A+ A.M. Best rated carriers.",
+  },
+  {
+    q: "Can I add additional insureds for GC projects?",
+    a: "Yes. SPF GL policies can add general contractors, property owners, and project managers as additional insureds. We process certificate requests and additional insured endorsements same-day.",
+  },
+  {
+    q: "How often should SPF contractors review their coverage?",
+    a: "Annual review is standard, but coverage should also be reviewed when: you add application types (e.g., start doing SPF roofing), add crew members, purchase new proportioner equipment, expand to new states, or take on commercial projects with higher limit requirements.",
+  },
+  {
+    q: "What is the difference between occurrence and claims-made GL for SPF contractors?",
+    a: "Occurrence-based GL covers claims for events that occur during the policy period regardless of when the claim is filed. Claims-made GL covers claims filed during the policy period. For SPF contractors with completed-operations exposure (foam applied in prior years), occurrence-based GL is generally preferable — it covers long-tail completed-operations claims without requiring tail coverage.",
+  },
+  {
+    q: "What is tail coverage and do SPF contractors need it?",
+    a: "Tail coverage (extended reporting period) applies to claims-made policies. It extends the period during which claims can be reported after the policy ends. If you hold a claims-made GL or CPL, tail coverage is critical when you cancel or change carriers — especially for SPF applicators with completed-operations exposure from prior years.",
+  },
+  {
+    q: "Does GL cover SPF completed-operations claims?",
+    a: "SPF-specific GL includes completed-operations coverage for claims arising from foam applied in prior policy periods. Standard GL completed-operations exclusions for SPF work are common — verify your policy covers SPF completed operations explicitly.",
+  },
+  {
+    q: "Can I get coverage if I'm a new SPF contractor with no prior insurance history?",
+    a: "Yes. New SPF contractors without prior insurance history can be placed in E&S markets with slightly higher rates, with rates typically improving after 1–3 years of clean loss history. We work with markets that write new-venture SPF accounts.",
+  },
+  {
+    q: "What is the typical GL limit for SPF contractors?",
+    a: "Most SPF contractors carry $1M per occurrence / $2M aggregate. Commercial projects and GC requirements frequently call for $2M/$4M or $3M/$6M. Umbrella policies are then stacked above to reach $5M or $10M total limits.",
+  },
+  {
+    q: "How does claim reporting work for SPF insurance?",
+    a: "Report claims to your carrier immediately upon a covered event or notice of potential claim. For SPF contractors, this includes: off-ratio application events, occupant complaints about off-gassing, foam adhesion failures, and any third-party bodily injury or property damage arising from your SPF work. We provide claims coordination and carrier contact guidance.",
+  },
+  {
+    q: "Can I bundle multiple SPF coverage lines with one agency?",
+    a: "Yes — and we recommend it. Coordinating GL, CPL, WC, commercial auto, rig insurance, and umbrella through a single agency prevents coverage gaps (particularly between commercial auto and rig equipment), simplifies certificate management, and allows us to review the full program for completeness annually.",
+  },
+  {
+    q: "What is an equipment floater and how does it differ from commercial property?",
+    a: "An equipment floater (inland marine) covers mobile equipment — like your SPF proportioner — wherever it goes: job sites, in transit, and at your yard. Commercial property only covers equipment at a fixed, scheduled location. SPF proportioners require a floater, not a property policy, because they move with every job.",
+  },
 ];
 
-/* ============================================================
-   SERVICE DETAIL
-   ============================================================ */
-export interface ServiceDetail {
+// ============================================================
+// SERVICE_DETAIL — per-slug content blocks
+// ============================================================
+export const SERVICE_DETAIL: Record<string, {
   heroBlurb: string;
   whatsCovered: string[];
   whoItsFor: string[];
   whyCca: string[];
   faqs: { q: string; a: string }[];
-}
-
-export const SERVICE_DETAIL: Record<string, ServiceDetail> = {
-  "general-liability": {
-    heroBlurb: "General liability insurance written for spray foam insulation contractors — with endorsements that cover the chemical-application exposure, completed-operations for foam products, and property damage that generic contractor GL policies exclude.",
-    whatsCovered: ["Third-party bodily injury on the jobsite", "Property damage from foam expansion, application errors, or adhesion failures", "Completed-operations claims arising after the job is done", "Defense costs and legal fees for covered claims", "Products liability for spray foam materials you apply", "Additional insured requirements for GCs and project owners"],
-    whoItsFor: ["Any spray foam contractor — residential, commercial, or roofing foam", "Operations required to show GL certificates to general contractors", "Contractors whose current GL excludes or sublimits chemical application", "Spray foam businesses that have been declined or canceled by standard markets"],
-    whyCca: ["We place GL forms with spray foam endorsements — not generic contractor forms with carve-outs", "Completed-operations limits set to reflect the real cost of a foam removal or property-damage claim", "E&S market access for contractors standard carriers won't write"],
-    faqs: [
-      { q: "Why doesn't a standard contractor GL cover spray foam work?", a: "Standard contractor GL policies are built around general construction. Spray foam is a chemical application that releases VOCs, involves specialized equipment, and creates unique completed-operations risks. Most policies either exclude chemical application entirely or sub-limit coverage in ways that make the policy nearly useless for a foam claim." },
-      { q: "What are completed-operations claims for spray foam?", a: "Completed-operations covers claims that arise after you've finished the job — a homeowner discovers foam expanded into their HVAC system, a commercial tenant reports off-gassing after application, or foam with an incorrect ratio causes structural issues. Without proper completed-ops coverage, these post-job claims can be denied." },
-      { q: "How much GL coverage does a spray foam contractor need?", a: "Most GCs and commercial project owners require $1M per occurrence / $2M aggregate at minimum. For commercial and industrial work, $2M/$4M is increasingly common. We size the limit to your actual work and supplement with an umbrella for large projects." },
-      { q: "Will GL cover a fire from spray foam off-gassing?", a: "Fire from foam off-gassing during or after application is a covered peril under a properly structured GL — but only if the chemical application exclusions are properly handled. We confirm the fire-from-foam scenario is covered in the forms we place." },
-      { q: "Does GL cover damage from over-spray or drift?", a: "Yes — over-spray that lands on a homeowner's car, a neighboring property, or HVAC equipment is a property-damage claim covered under the GL. We make sure the policy's coverage territory and property-damage provisions reflect the realities of spray foam application." },
-      { q: "What additional insured endorsements do spray foam contractors need?", a: "Most GCs require you to add them as additional insured on your GL and sometimes CPL. We can issue blanket additional-insured endorsements so you're not calling us for every certificate — and we make sure the AI language satisfies the typical GC contract requirement." },
+}> = {
+  "spf-contractor-gl": {
+    heroBlurb: "SPF contractor GL is not standard contractor GL with a spray foam endorsement — it's a distinct product written for the classification, chemical exposure, and completed-operations profile of spray polyurethane foam applicators. Standard GL policies deny SPF claims at the class code level and through pollution exclusions. We write GL that actually covers SPF work.",
+    whatsCovered: [
+      "Bodily injury and property damage arising from SPF application operations",
+      "Completed-operations coverage for foam applied in prior policy periods",
+      "Off-ratio application events as covered occurrences (not excluded 'expected injury')",
+      "Premises and operations for SPF job sites",
+      "Personal and advertising injury",
+      "Medical payments to third parties",
+      "SPF-specific class code endorsements (not mislabeled as general insulation)",
     ],
-  },
-  "off-ratio-coverage": {
-    heroBlurb: "Coverage for off-ratio spray foam events — when the A:B component ratio is wrong, foam doesn't cure correctly, and the resulting property damage, chemical exposure, and removal costs land in a gap most GL policies explicitly exclude.",
-    whatsCovered: ["Property damage from improperly cured spray foam that must be removed", "Third-party bodily injury from chemical exposure due to off-ratio foam", "Costs to identify and remove defective foam from a structure", "Defense costs when an off-ratio event results in a lawsuit", "Chemical release claims from incompletely reacted isocyanate or polyol", "Remediation and restoration costs following an off-ratio application"],
-    whoItsFor: ["Any spray foam contractor using two-component spray polyurethane foam systems", "Contractors whose GL policy excludes or sublimits off-ratio events", "High-volume commercial applicators with greater exposure to equipment malfunction", "Residential contractors working in occupied homes where off-ratio exposure is a tenant risk"],
-    whyCca: ["We access specialty markets that write off-ratio as a distinct, insurable risk", "Off-ratio coverage coordinated with CPL so chemical exposure from incomplete reactions is also covered", "Claims handling with adjusters who understand spray foam chemistry — not generic property adjusters"],
+    whoItsFor: [
+      "Residential closed-cell and open-cell SPF applicators",
+      "Commercial SPF roofing contractors",
+      "Agricultural and cold-storage SPF applicators",
+      "SPF insulation subcontractors working under GC contracts",
+      "SPF contractors entering new states or application types",
+      "Contractors transitioning from standard GL that excluded SPF work",
+    ],
+    whyCca: [
+      "SPF class code expertise — we assign the correct NCCI/ISO codes, not generic 'insulation contractor'",
+      "Off-ratio endorsement review — we verify the policy language covers off-ratio events as occurrences",
+      "Pollution exclusion audit — we confirm isocyanate and VOC exposure is not excluded by the GL pollution clause",
+      "Completed-operations verification — confirm your GL covers foam applied in prior periods",
+      "Same-day certificates with accurate SPF coverage language for GC review",
+    ],
     faqs: [
-      { q: "What exactly is an off-ratio spray foam event?", a: "Spray polyurethane foam is a two-component system — isocyanate (A-side) and polyol (B-side) — that must be mixed at a precise ratio for the foam to cure correctly. When equipment malfunctions, heaters fail, or a setup error occurs, the ratio goes off. The result is foam that doesn't cure, remains tacky, off-gasses incompletely reacted isocyanate, and can cause serious property damage and bodily injury." },
-      { q: "Why does my standard GL exclude off-ratio claims?", a: "Most GL policies have language excluding damage arising from the insured's own product or work that is defective, or from chemical releases treated as pollution events. An off-ratio foam application can be classified as either a defective product or a pollution release — and both exclusions can apply. Off-ratio coverage is written to address this specific gap." },
-      { q: "How common are off-ratio events?", a: "More common than most contractors realize. Equipment heater failures, hose blockages, pressure imbalances, and cold-weather application can all produce off-ratio foam. Even experienced applicators working with well-maintained equipment face off-ratio risk on every job." },
-      { q: "Is off-ratio coverage the same as CPL?", a: "No. Contractor Pollution Liability covers third-party bodily injury and property damage from chemical releases — VOCs, isocyanates, and blowing agents. Off-ratio coverage addresses the defective-product aspect — foam that didn't cure right and the property damage from removing it. For full protection, you want both, coordinated." },
-      { q: "Does the foam manufacturer's warranty cover off-ratio events?", a: "Manufacturer warranties typically cover product defects — issues with the chemical itself. An off-ratio event caused by equipment malfunction or applicator error is not a product defect and is not covered by the manufacturer's warranty. That's a contractor liability — which is exactly what off-ratio coverage addresses." },
+      { q: "What makes SPF GL different from standard contractor GL?", a: "SPF GL uses the correct class codes for spray foam applicators, includes off-ratio endorsements, and is written with carriers who understand that isocyanate exposure events are covered occurrences — not pollution exclusions or product defects." },
+      { q: "Will standard GL cover an off-ratio foam event?", a: "In most cases, no. Standard GL policies treat off-ratio events as 'expected or intended injury' or exclude them under product liability exclusions. SPF-specific GL endorsements address off-ratio events explicitly as covered occurrences." },
+      { q: "Can I get GL that also covers my subcontracted SPF crews?", a: "Yes, with a blanket subcontractor endorsement. We verify that your GL extends coverage to hired SPF applicator subcontractors and review their certificate requirements." },
     ],
   },
   "contractor-pollution-liability": {
-    heroBlurb: "Contractor Pollution Liability (CPL) for spray foam applicators — covering third-party bodily injury and property damage from VOC emissions, MDI isocyanate exposure, blowing agent releases, and the chemical events that standard GL excludes under the pollution exclusion.",
-    whatsCovered: ["Third-party bodily injury from VOC and isocyanate exposure during application", "Property damage from chemical releases and residual off-gassing", "Cleanup and remediation costs following a chemical release event", "Defense costs for bodily injury and pollution claims", "Tenant and occupant exposure claims in occupied buildings", "Transport and storage incidents involving two-component foam chemicals"],
-    whoItsFor: ["Any spray foam contractor — the pollution exposure is inherent in the trade", "Contractors working in occupied residences or commercial buildings where tenant exposure is a real risk", "High-volume applicators whose chemical storage and transport creates additional exposure", "Any contractor who has been required by a GC or project owner to carry CPL"],
-    whyCca: ["CPL coordinated with GL so VOC and isocyanate claims don't fall through the policy gap", "We document your PPE protocols, ventilation procedures, and applicator training to improve placement and pricing", "E&S CPL market access for contractors with prior pollution claims or challenging work environments"],
+    heroBlurb: "MDI and TDI — the isocyanates in the A-component of SPF — are classified as pollutants under standard ISO GL pollution exclusion language. This means standard GL typically won't cover isocyanate exposure events, off-gassing complaints, or indoor air quality claims from SPF application. Contractor Pollution Liability (CPL) fills that gap specifically for SPF chemical exposure.",
+    whatsCovered: [
+      "Third-party bodily injury from isocyanate (MDI/TDI) exposure during application",
+      "Indoor air quality claims from building occupants post-SPF application",
+      "Amine catalyst and blowing agent (HFO, CO2) off-gassing complaints",
+      "Chemical spill cleanup costs from A and B component releases on job sites",
+      "Property damage from chemical contamination during SPF operations",
+      "Transportation pollution incidents involving chemical drum transport",
+      "Extended reporting periods for long-tail exposure claims",
+    ],
+    whoItsFor: [
+      "SPF contractors applying closed-cell foam in occupied or recently occupied buildings",
+      "Commercial SPF roofing contractors with occupant exposure risk",
+      "Contractors working near HVAC intakes where isocyanate can enter building systems",
+      "SPF contractors in states with strict VOC regulations (CA, NY, IL)",
+      "SPF subcontractors whose GC requires CPL on the certificate",
+      "Any SPF applicator whose GL pollution exclusion is not endorsed for isocyanates",
+    ],
+    whyCca: [
+      "CPL trigger language review — we verify that MDI/TDI is explicitly covered under the pollutant definition",
+      "Transportation pollution coordination — we align CPL with commercial auto for chemical cargo coverage",
+      "Retroactive date management — we maintain CPL retroactive dates to protect prior-period exposure events",
+      "GC certificate compliance — we issue CPL certificates showing pollutant coverage for isocyanates",
+      "Multi-carrier placement for stacked CPL limits on large commercial SPF projects",
+    ],
     faqs: [
-      { q: "Why does my standard GL exclude VOC and isocyanate claims?", a: "Standard GL policies contain a pollution exclusion that removes coverage for the discharge, dispersal, or release of chemical substances. VOCs and MDI isocyanates released during spray foam application are classified as pollutants under most policies — meaning third-party bodily injury and property damage from those releases is excluded. CPL is written specifically to fill that gap." },
-      { q: "What is MDI isocyanate and why is it a liability risk?", a: "MDI (methylene diphenyl diisocyanate) is the primary chemical in the A-side of two-component spray foam. During application, aerosol and vapor can be inhaled by workers and occupants, causing respiratory sensitization, asthma, and in severe cases, occupational asthma or hypersensitivity pneumonitis. Third-party bodily injury claims from isocyanate exposure are a real and significant liability." },
-      { q: "Do I need CPL even if I use proper PPE and ventilation?", a: "Yes. PPE and ventilation reduce the risk of a claim, but they don't eliminate it — and they don't replace insurance coverage. A tenant who claims respiratory symptoms after a spray foam job can file a claim regardless of your safety protocols. CPL covers the defense and any damages in that event." },
-      { q: "Is CPL required by GCs for spray foam subcontractors?", a: "Increasingly, yes. As GCs become more aware of the chemical exposure risk in spray foam work, many are adding CPL requirements to their subcontractor agreements alongside the standard GL requirement. We place CPL that satisfies these contract requirements." },
-      { q: "What limits should a spray foam contractor carry for CPL?", a: "Minimum CPL limits are typically $1M per occurrence / $2M aggregate. For commercial and industrial work, or contractors working in occupied buildings, $2M/$4M or higher is common. We model your actual exposure and size the limit accordingly." },
-      { q: "Can CPL cover a chemical spill during transport?", a: "Yes — CPL can include coverage for pollution events during transport and storage of A and B-side foam chemicals. If a drum leaks or spills in transit, the resulting cleanup and third-party claims can be covered. We confirm the transport endorsement is in the form we place." },
+      { q: "Is isocyanate covered under standard GL or CPL?", a: "Standard GL pollution exclusions typically exclude isocyanate exposure events as pollutant-triggered claims. CPL is the coverage vehicle for MDI/TDI and related SPF chemical exposure — it's written specifically to cover the pollutant events that GL excludes." },
+      { q: "What is a CPL retroactive date?", a: "A retroactive date establishes the earliest date from which CPL coverage applies to claims. For SPF contractors, maintaining or backdating retroactive dates is critical — exposure claims can surface months to years after application. We manage retroactive dates carefully when switching carriers." },
+      { q: "Does CPL cover transportation of A and B component drums?", a: "Some CPL policies extend to transportation pollution events. We verify that your CPL covers chemical releases during drum transport, or coordinate with a commercial auto pollution endorsement to cover that gap." },
     ],
   },
   "workers-compensation": {
-    heroBlurb: "Workers' compensation coverage for spray foam insulation crews — properly class-coded for chemical applicators, written by markets that understand the high-hazard spray foam work environment, and structured for residential and commercial operations.",
-    whatsCovered: ["Medical treatment for on-the-job injuries", "Disability and lost-wage benefits for injured workers", "Chemical inhalation and respiratory injury from foam chemicals", "Fall injuries from working at height (roofs, attics, walls)", "Burn injuries from exothermic foam reactions", "Employers' liability (Part Two) protection for employer negligence claims"],
-    whoItsFor: ["Spray foam contractors with W-2 employees (required in most states)", "Applicator crews handling two-component foam chemicals", "Roofing foam applicators with fall exposure", "Operations whose workers are misclassified under generic insulation codes"],
-    whyCca: ["Class codes structured for actual spray foam applicator job categories", "High-hazard chemical exposure reflected in the rating — not generic insulation or painting codes", "Markets that write spray foam workers' comp without excessive surcharges or exclusions"],
+    heroBlurb: "SPF applicators face WC exposure that general contractor WC policies don't account for: isocyanate respiratory sensitization, chemical burns from A and B component contact, and elevated fall risk on roofing and elevated SPF applications. We place WC with carriers who understand spray foam class codes and audit SPF payroll accurately.",
+    whatsCovered: [
+      "Statutory workers' compensation benefits for all SPF application crew members",
+      "Isocyanate sensitization and occupational respiratory disease claims",
+      "Chemical burns and dermal exposure from A and B component contact",
+      "Fall injuries on SPF roofing and elevated wall applications",
+      "Cumulative trauma claims from repetitive spray equipment operation",
+      "Employers liability (Coverage B) for third-party-over actions",
+      "All states where you employ SPF applicator crews",
+    ],
+    whoItsFor: [
+      "SPF contractors with W-2 applicator employees",
+      "Contractors with mixed crews — direct employees plus hired day-labor SPF crews",
+      "SPF roofing contractors with elevated fall exposure",
+      "Cold-storage and agricultural SPF applicators with confined-space WC exposure",
+      "Contractors undergoing WC audit with prior payroll misclassification",
+    ],
+    whyCca: [
+      "SPF class code review — correct NCCI code assignment prevents large audit charges",
+      "Dual-wage rule guidance — we review state-specific dual-wage rules for SPF applicator pay rates",
+      "Payroll allocation assistance — correctly segregate applicator, clerical, and driver payroll",
+      "Audit preparation — we prepare payroll documentation to minimize audit surprises",
+      "Multi-state WC coordination for contractors operating in multiple states",
+    ],
     faqs: [
-      { q: "Is workers' comp required for spray foam employees?", a: "In most states, yes — once you have employees, workers' comp is mandatory. Spray foam work is classified as high-hazard due to chemical inhalation, fall exposure, and confined-space risk. Proper workers' comp is essential for both your crew's protection and your legal compliance." },
-      { q: "What class codes apply to spray foam workers?", a: "Spray foam applicators are often coded under 5473 (insulation work) or occasionally under painting codes. The correct code matters for premium calculation, audit results, and claims handling. We assign codes to your actual workflow — chemical applicators, helpers, and supervisors each have different exposure profiles." },
-      { q: "Are chemical inhalation injuries covered under workers' comp?", a: "Yes — respiratory injuries from isocyanate, VOC, or blowing agent exposure are covered under workers' comp for the affected employee. On the third-party side (a building occupant or neighboring worker), that's a CPL claim. Workers' comp covers the employer's own crew only." },
-      { q: "What if my spray foam workers are misclassified?", a: "Misclassification leads to premium disputes at audit — either underpayment that results in a large audit bill, or overpayment that costs you money unnecessarily. We assign class codes to your actual workflow and document it so your audit produces no surprises." },
-      { q: "How are 1099 spray foam subcontractors handled?", a: "1099 contractors who don't carry their own workers' comp can be deemed employees in many states, making you responsible for their comp claims. We help you understand which subs need to carry their own coverage and how to document it — protecting you from the audit exposure." },
+      { q: "What NCCI class code applies to spray foam applicators?", a: "SPF applicators typically fall under codes in the 5183 (Plumbing, Heating, Ventilation) or specialty insulation contractor range, depending on state bureau rules. Exact code assignment varies by state and application type. We verify correct code assignment with each carrier." },
+      { q: "What is a WC audit and how does it affect SPF contractors?", a: "WC policies are written on estimated payroll and adjusted at year-end audit based on actual payroll. For SPF contractors, audit adjustments can be significant if payroll is misclassified or if hired day-labor crews are added to the audited payroll. We help prepare audit documentation and respond to carrier audit findings." },
+      { q: "Can I cover 1099 SPF subcontractors under my WC policy?", a: "WC coverage for 1099 subcontractors depends on state law. In many states, uninsured subcontractors are added to your WC payroll at audit. We review your subcontractor certificates and advise on the WC implications of your contractor/subcontractor mix." },
     ],
   },
   "commercial-auto": {
-    heroBlurb: "Commercial auto coverage for spray foam contractors' vehicles — proportioner trucks, chemical transport vehicles, service vans, and spray rigs — structured for equipment-intensive, multi-state spray foam insulation operations.",
-    whatsCovered: ["Liability for at-fault accidents involving foam rigs and chemical transport vehicles", "Physical damage to owned vehicles used for spray foam work", "Hired and non-owned auto for employees driving personal vehicles", "Equipment endorsements for proportioners and spray equipment on vehicles", "Multi-state operation coverage for contractors who travel for commercial jobs", "Loading and unloading liability for chemical handling"],
-    whoItsFor: ["Any spray foam contractor with owned vehicles (trucks, vans, spray rigs)", "Contractors transporting two-component foam chemicals on public roads", "Operations whose vehicles carry proportioning machines and spray equipment", "Businesses whose employees drive personal vehicles for work errands or site visits"],
-    whyCca: ["Commercial auto structured for the spray foam exposure — chemical transport, equipment-carrying vehicles, and multi-state travel", "Coordinates with tools and equipment coverage for the proportioner and gear on the vehicle", "Fleet programs for contractors with multiple rigs"],
+    heroBlurb: "SPF contractor vehicles are not standard commercial vehicles — proportioner trucks, chemical transport vehicles, and heated-hose rigs require proper scheduling and may require chemical cargo endorsements. We schedule SPF rigs correctly as commercial vehicles, coordinate with rig equipment floaters for the proportioner, and address chemical cargo coverage.",
+    whatsCovered: [
+      "Liability for bodily injury and property damage from SPF contractor vehicle accidents",
+      "Physical damage (collision and comprehensive) on proportioner trucks and service vehicles",
+      "Hired and non-owned auto liability for rented or employee vehicles used in SPF operations",
+      "Chemical cargo transport liability coordination with CPL policy",
+      "Medical payments coverage for vehicle occupants",
+      "Uninsured/underinsured motorist coverage",
+      "Trailer liability for spray equipment trailers",
+    ],
+    whoItsFor: [
+      "SPF contractors with one or more proportioner trucks or spray rigs",
+      "Contractors transporting A and B component drums between job sites",
+      "Multi-crew SPF operations with multiple service vehicles",
+      "SPF contractors renting vehicles or using employee vehicles for job-site transport",
+      "Contractors whose commercial auto is currently scheduled incorrectly as non-commercial vehicles",
+    ],
+    whyCca: [
+      "Correct rig scheduling — we describe SPF proportioner trucks accurately to avoid coverage disputes",
+      "Chemical cargo coordination — we align commercial auto with CPL for chemical transport events",
+      "Rig equipment floater coordination — we eliminate the gap between commercial auto and equipment coverage",
+      "Fleet scheduling review — verify all vehicles including employee-owned vehicles used for SPF work are covered",
+      "Driver qualification review — we advise on MVR requirements for SPF applicator drivers",
+    ],
     faqs: [
-      { q: "Is my spray foam rig different from a standard contractor vehicle?", a: "Yes — a vehicle carrying a proportioning machine, chemical drums, and spray equipment is a specialized commercial vehicle with different liability and physical damage considerations than a standard pickup truck. We structure commercial auto to reflect the actual nature of a spray foam rig." },
-      { q: "Is the proportioner and spray equipment on my truck covered by auto?", a: "No — the vehicle is covered by commercial auto; the equipment on it needs inland marine or tools and equipment coverage. We coordinate both so there's no gap between the vehicle policy and the equipment policy when a rig is involved in an accident or theft." },
-      { q: "Do I need special endorsements for transporting foam chemicals?", a: "The A-side chemical (MDI isocyanate) has specific transport requirements. Commercial auto can be endorsed for chemical transport, and we confirm that the policy addresses the loading and unloading liability that comes with moving hazardous materials." },
-      { q: "What is hired and non-owned auto, and do I need it?", a: "Hired and non-owned covers liability when employees drive personal or rented vehicles on business — running to the supply house, meeting a client, or traveling to a jobsite. Any spray foam business where employees occasionally use their own vehicles should carry this coverage." },
-      { q: "Are spray foam contractors who travel across state lines covered?", a: "Yes — commercial auto provides coverage across state lines. We confirm the policy's coverage territory and make sure the travel patterns of your rigs and crews are properly reflected in the program." },
+      { q: "Does commercial auto cover my proportioner equipment?", a: "No. Commercial auto covers the vehicle — the truck or trailer. The proportioner machine, heated hoses, spray guns, and ancillary equipment are not covered under commercial auto. A separate rig insurance (inland marine equipment floater) is required for the equipment." },
+      { q: "Does commercial auto cover chemical spills from A and B component drums during transport?", a: "Standard commercial auto does not cover pollution liability from chemical releases during transport. A pollution endorsement on the commercial auto policy or CPL with a transportation trigger is needed. We coordinate these coverages to eliminate the transport pollution gap." },
+      { q: "Can I insure a rented proportioner truck under my commercial auto policy?", a: "Hired auto coverage on your commercial auto policy covers rented vehicles. We verify your hired auto limit is sufficient for the replacement value of rented SPF rigs and coordinate with the rig equipment floater if proportioner equipment is included in the rental." },
     ],
   },
-  "tools-equipment": {
-    heroBlurb: "Tools and equipment coverage for spray foam contractors — insuring proportioners, spray guns, heated hoses, generators, and chemical transfer equipment against theft, damage, and breakdown on the jobsite or in transit.",
-    whatsCovered: ["Proportioning machines stolen from vehicles or jobsites", "Spray guns, hoses, and heated hose sets damaged or stolen", "Generators and power equipment used in spray foam operations", "Chemical transfer pumps and ancillary spray equipment", "Equipment damaged during transport or setup", "Rented equipment temporarily in your care, custody, or control"],
-    whoItsFor: ["Any spray foam contractor with equipment worth insuring (essentially all of them)", "Contractors working on jobsites where theft is a real risk", "Operations that transport expensive proportioners between jobsites", "Contractors who rent equipment and bear responsibility for it"],
-    whyCca: ["Blanket tools and equipment policies that cover all your spray gear without scheduling every item", "Agreed-value options for high-value proportioners so depreciation doesn't reduce the claim", "Coordinates with commercial auto so there's no gap between vehicle and equipment coverage"],
+  "rig-insurance": {
+    heroBlurb: "Your SPF proportioner is your production asset — typically $20,000 to $80,000+ in replacement value — and it is not covered under your commercial auto policy. Inland marine rig insurance (equipment floater) covers your proportioner, heated hose assemblies, spray guns, and ancillary equipment on-site, in-transit, and at your yard or shop.",
+    whatsCovered: [
+      "Proportioner machine (agreed-value or replacement-cost basis) — $15,000 to $80,000+",
+      "Heated hose assemblies including heated transfer hoses",
+      "Spray guns, tip kits, and application equipment",
+      "Drum heaters and auxiliary heating equipment",
+      "Generators and power equipment used for SPF operations",
+      "Equipment in transit between job sites",
+      "Equipment at temporary job-site storage locations",
+      "Equipment at your shop or yard location",
+    ],
+    whoItsFor: [
+      "Any SPF contractor with a proportioner machine (open-cell or closed-cell)",
+      "Contractors who assumed proportioner equipment is covered under commercial auto",
+      "SPF roofing contractors with high-output proportioner equipment ($50,000+)",
+      "Contractors with multiple proportioners or spare hose assemblies",
+      "SPF contractors who finance their proportioner and require lender certificate of insurance",
+    ],
+    whyCca: [
+      "Agreed-value endorsements — we write proportioners at agreed value, not ACV, eliminating depreciation disputes at claims time",
+      "Replacement-cost coverage — new proportioner replacement including installation and startup",
+      "Equipment inventory review — we ensure heated hoses, spray guns, and ancillaries are scheduled",
+      "Lender certificate issuance — we add equipment lenders as loss payees for financed proportioners",
+      "Coordination with commercial auto — we document the boundary between auto and equipment coverage to prevent gaps",
+    ],
     faqs: [
-      { q: "How much is a proportioning machine worth to insure?", a: "A mid-range proportioner for closed-cell foam can run $60,000–$120,000 new. Heated hose sets are another $10,000–$25,000. A full spray foam rig represents $80,000–$150,000 or more in specialized equipment — well worth insuring on its own terms." },
-      { q: "Is spray foam equipment covered under commercial auto if it's in my truck?", a: "No — commercial auto covers the vehicle itself. The proportioner, spray guns, and hoses in or on the truck need inland marine or tools and equipment coverage. This is one of the most common coverage gaps for spray foam contractors." },
-      { q: "Does tools coverage pay for equipment damaged on the jobsite?", a: "Yes — tools and equipment coverage typically covers damage caused by jobsite conditions: a hose run over by a vehicle, equipment knocked off scaffolding, or weather damage to gear left on-site. Blanket forms cover the equipment wherever it is." },
-      { q: "What if my spray equipment is stolen from a locked vehicle?", a: "Tools and equipment coverage typically covers theft from a locked vehicle. Auto policies generally don't cover tools and equipment in the vehicle. We make sure the form we place explicitly covers theft from a locked vehicle, which is the most common way spray foam equipment is stolen." },
-      { q: "Can I insure rented or borrowed equipment?", a: "Yes — a care, custody, and control (CC&C) endorsement or rented equipment provision covers temporary equipment in your possession. This is important for spray foam contractors who rent backup proportioners when their primary machine is in for service." },
+      { q: "What is an inland marine equipment floater?", a: "An inland marine policy (equipment floater) covers mobile equipment at whatever location it's used — job sites, in transit, and at your yard. It fills the gap left by commercial auto (covers the vehicle, not the equipment) and commercial property (covers fixed-location property, not mobile equipment)." },
+      { q: "Should I insure my proportioner at actual cash value or agreed value?", a: "Agreed value is preferable for proportioners. At ACV, depreciation is applied at claims time — a 5-year-old proportioner might pay out at 50% of replacement cost. At agreed value, the policy pays the agreed amount regardless of depreciation. We write proportioner floaters at agreed value wherever markets allow." },
+      { q: "Does rig insurance cover heated hoses?", a: "Yes, when properly scheduled. Heated hose assemblies — which can run $3,000 to $8,000 per set — must be listed on the equipment schedule. We review your full equipment list to ensure hoses, spray guns, and ancillaries are included in the floater." },
     ],
   },
   "umbrella": {
-    heroBlurb: "Commercial umbrella coverage for spray foam contractors — providing excess limits above your GL, commercial auto, and workers' comp for catastrophic claims that exceed underlying policy limits.",
-    whatsCovered: ["Excess limits above general liability for large property damage or injury claims", "Excess limits above commercial auto for major vehicle accidents", "Excess limits above workers' comp employers' liability for negligence claims", "Coverage for claims that trigger multiple underlying policies simultaneously", "Defense cost coverage above underlying policy limits", "Drop-down coverage when an underlying policy is exhausted"],
-    whoItsFor: ["Spray foam contractors doing commercial or industrial work", "Any contractor required by GCs or project owners to carry $2M+ in coverage", "Operations with multiple rigs and crews creating broader exposure", "Any spray foam business that wants protection against catastrophic loss scenarios"],
-    whyCca: ["Umbrella coordinated with the underlying GL, CPL, and auto so there are no coverage gaps at the trigger point", "Higher limits available for large commercial operations requiring $5M or $10M in total coverage", "Umbrella markets that understand chemical-application contractor exposures"],
-    faqs: [
-      { q: "Why does a spray foam contractor need an umbrella?", a: "A single large off-ratio event in a commercial building, a fire from foam off-gassing, or a serious vehicle accident can produce claims that exceed standard GL or auto limits. Commercial umbrella provides the coverage above underlying limits that catastrophic claims require — and it's typically the most cost-effective way to get higher total limits." },
-      { q: "What limits should a spray foam contractor carry for umbrella?", a: "For residential-only contractors, $1M–$2M umbrella is common. For commercial and industrial work or operations with multiple crews and rigs, $2M–$5M is typical. Some project owners and GCs require $5M or higher for large projects." },
-      { q: "Does the umbrella cover claims from CPL policies?", a: "Most commercial umbrella policies follow the form of the underlying GL, not a standalone CPL. If your CPL is a separate policy, the umbrella may not automatically follow it — we confirm the umbrella's relationship to the CPL so there are no surprises at claim time." },
-      { q: "Is an umbrella required by GCs on commercial spray foam projects?", a: "Yes, increasingly. Many commercial GCs require $2M total ($1M GL + $1M umbrella) or $3M or higher for spray foam subcontractors on their projects. We issue the certificate of insurance showing the combined limits." },
-      { q: "How does umbrella interact with my workers' comp employers' liability?", a: "A commercial umbrella can be structured to sit above the employers' liability (Part Two) of your workers' comp policy. This is important because employers' liability claims — where an employee sues the employer for negligence — can produce large verdicts that statutory comp limits don't cover." },
+    heroBlurb: "Commercial GCs and institutional property owners increasingly require SPF subcontractors to carry $5M to $10M umbrella limits — above the GL and CPL base policies. We build umbrella stacks that follow form over SPF-specific GL and CPL, providing true excess coverage and satisfying GC certificate requirements for large commercial SPF projects.",
+    whatsCovered: [
+      "Excess limits above SPF GL — $1M to $10M per occurrence over underlying GL",
+      "Follow-form excess over CPL for isocyanate and pollution liability events",
+      "Excess over workers' comp employers liability (Coverage B)",
+      "Excess over commercial auto liability",
+      "Drop-down coverage when underlying policies are exhausted or fail to respond",
+      "Defense costs above underlying policy limits",
     ],
-  },
-  "bonds": {
-    heroBlurb: "Contractor bonds for spray foam insulation businesses — license and permit bonds required by states and municipalities, performance and payment bonds for commercial projects, and the certificate tracking that keeps your bond current.",
-    whatsCovered: ["License and permit bonds required for state contractor licensing", "Performance bonds for commercial spray foam projects", "Payment bonds ensuring subcontractors and suppliers are paid", "Bid bonds for commercial project bids", "Subdivision and site bonds for development projects", "Maintenance bonds during post-completion warranty periods"],
-    whoItsFor: ["Spray foam contractors required to be bonded to maintain a contractor's license", "Contractors bidding on commercial, government, or institutional spray foam projects", "Operations whose GCs require performance and payment bonds as a contract condition", "New spray foam businesses establishing bonding credit for the first time"],
-    whyCca: ["Fast bond issuance — often same-day for license bonds under standard limits", "Bond coordinated with your GL and CPL program so underwriters see the full risk picture", "Bonding capacity for larger commercial projects and established spray foam businesses"],
+    whoItsFor: [
+      "SPF contractors bidding on commercial projects requiring $5M or $10M umbrella certificates",
+      "SPF subcontractors whose GC master policy has spray foam exclusions requiring subcontractor umbrella",
+      "Industrial and institutional SPF contractors with large completed-operations exposure",
+      "SPF roofing contractors on high-value commercial or industrial buildings",
+      "Contractors with multi-year SPF projects requiring continuous high-limit coverage",
+    ],
+    whyCca: [
+      "Follow-form umbrella over SPF-specific GL — we verify the umbrella follows the SPF GL form, not a generic contractor form",
+      "CPL follow-form option — some umbrella markets will excess over CPL for total pollution limit stacking",
+      "GC compliance review — we confirm umbrella language satisfies the specific GC certificate requirements",
+      "Same-day umbrella certificates for project bid deadlines",
+      "Multi-year umbrella options for large SPF projects requiring extended coverage",
+    ],
     faqs: [
-      { q: "Do I need a bond to operate as a spray foam contractor?", a: "Many states require a contractor license bond as a condition of licensing or registration. Bond requirements and amounts vary by state and license type. We issue license bonds in all states that require them, often same-day for standard limits." },
-      { q: "What's the difference between a license bond and a performance bond?", a: "A license bond protects the public — it's a condition of your contractor's license and compensates clients if you don't perform licensed work correctly. A performance bond is project-specific — it guarantees you'll complete a specific job per the contract terms. Both are common requirements for spray foam contractors." },
-      { q: "Do I need a performance bond for spray foam jobs?", a: "For commercial, government, and institutional spray foam projects, performance bonds are increasingly required. The project owner or GC requires the bond to ensure the spray foam work is completed per specification and any defects are remediated." },
-      { q: "How much does a spray foam contractor bond cost?", a: "License bonds are relatively inexpensive — often $100–$500 per year for standard limits. Performance bonds are priced as a percentage of the contract value, typically 1%–3% depending on project size and your credit and financial strength." },
-      { q: "What happens if a claim is made against my bond?", a: "A bond claim is filed by a third party claiming you didn't perform as required. The surety investigates and, if the claim is valid, pays the claimant up to the bond amount. You are then responsible to reimburse the surety — a bond is a guarantee to others, not insurance for you. This is why proper GL coverage alongside the bond matters." },
+      { q: "What does it mean for an umbrella to 'follow form' over SPF GL?", a: "Follow-form umbrella adopts the same coverage terms as the underlying GL policy. For SPF contractors, this means the umbrella covers the same SPF-specific risks as the GL — including off-ratio events and SPF class codes — rather than excluding them as a standard umbrella might." },
+      { q: "Can the umbrella follow form over both GL and CPL?", a: "Some umbrella markets will excess over both GL and CPL, providing excess pollution limits in addition to excess GL limits. This is particularly valuable for SPF contractors on large commercial projects with high isocyanate exposure potential." },
+      { q: "How quickly can umbrella coverage be bound for a project deadline?", a: "For accounts with existing GL and CPL in place, umbrella can typically be bound same-day. We issue certificates immediately upon binding. For new accounts, the full program (GL + CPL + umbrella) typically takes 24–48 hours to bind from complete application submission." },
     ],
   },
 };
 
-/* ============================================================
-   COVERAGE REGIONS — coverage page
-   ============================================================ */
+// ============================================================
+// AZ_REGIONS — 8 SPF contractor markets
+// ============================================================
 export const AZ_REGIONS = [
-  { name: "Texas & Southwest", note: "TX, AZ, NM, NV — high-volume new construction and commercial foam markets" },
-  { name: "Southeast", note: "FL, GA, NC, SC — humidity-driven insulation demand and coastal construction" },
-  { name: "Midwest", note: "IL, IN, OH, MI, MN — cold-climate residential and commercial foam work" },
-  { name: "Northeast", note: "NY, PA, NJ, CT, MA — aging housing stock retrofits and tight energy codes" },
-  { name: "California", note: "CA — Title 24 energy codes and strict VOC regulations" },
-  { name: "Mountain States", note: "CO, UT, ID, WY — cold-weather application and booming construction" },
-  { name: "Mid-Atlantic", note: "VA, MD, DC, DE — residential retrofits, commercial builds, federal projects" },
-  { name: "Pacific Northwest", note: "WA, OR, ID — energy efficiency codes and environmental regulations" },
+  { name: "Texas & Southwest", note: "TX·AZ·NM — high SPF application volume in residential, commercial, and agricultural markets" },
+  { name: "Southeast", note: "FL·GA·NC — coastal and commercial SPF markets with high closed-cell demand" },
+  { name: "Midwest", note: "IL·OH·MI — industrial SPF applications in manufacturing and cold storage" },
+  { name: "Northeast", note: "NY·PA·NJ — commercial SPF demand in dense urban and mixed-use construction" },
+  { name: "California", note: "CA — strict VOC regulations, large commercial SPF market, surplus line compliance" },
+  { name: "Mountain States", note: "CO·UT — SPF insulation demand driven by extreme temperature differentials" },
+  { name: "Mid-Atlantic", note: "VA·MD — federal and commercial SPF with government contractor requirements" },
+  { name: "Pacific Northwest", note: "WA·OR — industrial SPF in manufacturing, cold storage, and commercial construction" },
 ];
 
+// ============================================================
+// US_STATES
+// ============================================================
 export const US_STATES = [
-  "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
-  "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa",
-  "Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan",
-  "Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire",
-  "New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio",
-  "Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota",
-  "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia",
-  "Wisconsin","Wyoming",
+  "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware",
+  "Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky",
+  "Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi",
+  "Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico",
+  "New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania",
+  "Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont",
+  "Virginia","Washington","West Virginia","Wisconsin","Wyoming",
 ];
 
+// ============================================================
+// QUOTE_SERVICE_TYPES
+// ============================================================
 export const QUOTE_SERVICE_TYPES = [
-  "General Liability for Spray Foam",
-  "Off-Ratio Coverage",
+  "SPF Contractor General Liability",
   "Contractor Pollution Liability (CPL)",
   "Workers' Compensation",
-  "Commercial Auto / Spray Rigs",
-  "Tools & Equipment Coverage",
+  "Commercial Auto & Spray Rigs",
+  "SPF Rig & Equipment Insurance",
   "Commercial Umbrella",
-  "Contractor Bonds",
-  "Full program / bundle (recommended)",
-  "Not sure — help me figure it out",
+  "Full Program (GL + CPL + WC + Auto + Rig + Umbrella)",
+  "GL + CPL Only",
+  "GL + Umbrella Stack",
+  "Other / Not Sure",
 ];
 
+// ============================================================
+// YEARS_OPTIONS
+// ============================================================
 export const YEARS_OPTIONS = [
   "Less than 1 year",
   "1–2 years",
