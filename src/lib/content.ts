@@ -64,13 +64,6 @@ export const COPY = {
     h2Highlight: "to bound coverage",
     lead: "Our quoting process is built for SPF contractors. We collect the right underwriting data the first time — proportioner specs, chemical types, job classifications — and return bindable quotes, not estimates.",
   },
-  testimonials: {
-    eyebrow: "SPF contractor clients",
-    h2Lead: "Contractors who",
-    h2Highlight: "switched to SPF-specific coverage",
-    lead: "SPF applicators who moved from generic contractor policies to SPF-specific coverage.",
-    h2: "Contractors who switched to SPF-specific coverage",
-  },
   finalCta: {
     h2: "Get SPF-specific coverage in 15 minutes",
     h2Lead: "Get SPF-specific coverage",

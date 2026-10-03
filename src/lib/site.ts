@@ -12,12 +12,12 @@ export const SITE = {
   phoneHref: "tel:+18449675247",
   email: "josh@contractorschoiceagency.com",
   address: {
-    street: "12220 E Riggs Road, Suite #105",
+    street: "12220 E Riggs Rd, Suite #104",
     city: "Chandler",
     state: "AZ",
     zip: "85249",
     country: "US",
-    full: "12220 E Riggs Road, Suite #105, Chandler, AZ 85249",
+    full: "12220 E Riggs Rd, Suite #104, Chandler, AZ 85249",
   },
   founded: 2005,
   npn: "8608479",
@@ -122,34 +122,4 @@ export const STATS = [
   { value: 20, prefix: "", suffix: "+", label: "Years insuring SPF applicators" },
   { value: 15, prefix: "", suffix: " min", label: "Average quote turnaround" },
   { value: 50, prefix: "", suffix: "", label: "States licensed and writing" },
-];
-
-export const TESTIMONIALS = [
-  {
-    name: "Marcus T.",
-    role: "Owner, T&S Spray Foam LLC",
-    company: "T&S Spray Foam LLC",
-    location: "Houston, TX",
-    quote: "We were getting declined everywhere because of our SPF classification. CCA got us GL with the right off-ratio endorsement in two days. First broker who actually understood what we do.",
-    text: "We were getting declined everywhere because of our SPF classification. CCA got us GL with the right off-ratio endorsement in two days. First broker who actually understood what we do.",
-    rating: 5,
-  },
-  {
-    name: "Sandra R.",
-    role: "Owner, Coastal Foam Solutions",
-    company: "Coastal Foam Solutions",
-    location: "Tampa, FL",
-    quote: "The CPL coverage for our isocyanate exposure was the piece we were missing. CCA explained the pollution exclusion gap in standard GL and placed us correctly. Real expertise.",
-    text: "The CPL coverage for our isocyanate exposure was the piece we were missing. CCA explained the pollution exclusion gap in standard GL and placed us correctly. Real expertise.",
-    rating: 5,
-  },
-  {
-    name: "Derek M.",
-    role: "Owner, Summit SPF Insulation",
-    company: "Summit SPF Insulation",
-    location: "Denver, CO",
-    quote: "Our GC required $5M umbrella with the SPF GL underneath. CCA had the stack bound within a week. They know the commercial SPF insurance market better than anyone we've worked with.",
-    text: "Our GC required $5M umbrella with the SPF GL underneath. CCA had the stack bound within a week. They know the commercial SPF insurance market better than anyone we've worked with.",
-    rating: 5,
-  },
 ];

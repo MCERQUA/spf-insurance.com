@@ -50,7 +50,7 @@ export function Hero() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-t-[6rem] rounded-b-3xl shadow-warm-lg border-4 border-white">
                 <img src="/images/hero.jpg" alt={COPY.hero.imageAlt} className="w-full h-[420px] md:h-[520px] object-cover" loading="eager" />
-                <div className="absolute inset-0 bg-gradient-to-t from-espresso/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>
 
               <motion.div initial={prefersReduced ? {} : { opacity: 0, y: 20 }} animate={prefersReduced ? {} : { opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="absolute -bottom-6 -left-4 md:-left-8 bg-white rounded-2xl shadow-warm-lg border border-adobe p-5 max-w-[15rem]">
