@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,9 +28,8 @@
     --bg-white: #ffffff;
     --adobe: #e2e8f0;
     --radius: 1rem;
-    --font-headline: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-label: 'IBM Plex Mono', monospace;
+    --font-headline: var(--font-heading), system-ui, sans-serif;
+    --font-label: var(--font-mono), monospace;
   }
 
   * { border-color: var(--adobe); }

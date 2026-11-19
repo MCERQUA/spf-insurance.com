@@ -1,25 +1,37 @@
-import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
 // Body + heading font — IBM Plex Sans (Technical Precision design system)
-export const bodyFont = IBM_Plex_Sans({
-  subsets: ["latin"],
+export const bodyFont = localFont({
+  src: [
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-body",
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-// Heading font alias (same family for consistent Technical Precision aesthetic)
-export const headingFont = IBM_Plex_Sans({
-  subsets: ["latin"],
+// Heading font alias (same family and faces as bodyFont; kept as its own const because --font-heading is a separate role)
+export const headingFont = localFont({
+  src: [
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/IBMPlexSans-variable.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-heading",
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 // Mono font — IBM Plex Mono (eyebrows, labels, technical notation)
-export const monoFont = IBM_Plex_Mono({
-  subsets: ["latin"],
+export const monoFont = localFont({
+  src: [
+    { path: "./fonts/IBMPlexMono-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/IBMPlexMono-500.woff2", weight: "500", style: "normal" },
+  ],
   variable: "--font-mono",
-  weight: ["400", "500"],
   display: "swap",
 });

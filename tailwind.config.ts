@@ -73,11 +73,11 @@ const config: Config = {
         adobeDark: "#cbd5e1",
       },
       fontFamily: {
-        headline: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
-        body: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
-        label: ["'IBM Plex Mono'", "monospace"],
+        headline: ["var(--font-heading)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+        label: ["var(--font-mono)", "monospace"],
         // Backward-compat aliases
-        heading: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         arch: "2rem 2rem 2rem 2rem",
